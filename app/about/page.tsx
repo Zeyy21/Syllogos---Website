@@ -62,7 +62,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-pad border-y border-[rgb(var(--border)/0.07)] bg-bg-deep">
+      <section className="section-pad section-tone-island">
         <div className="container-x">
           <SectionHeading
             eyebrow="The people behind the platform"
@@ -92,7 +92,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story sections */}
-      <section className="section-pad">
+      <section className="section-pad section-seam">
         <div className="container-x flex flex-col gap-14">
           {STORY.map((block, i) => (
             <div key={block.eyebrow}>

@@ -100,7 +100,7 @@ export default function DownloadPage() {
         </div>
       </section>
 
-      <section className="section-pad border-t border-[rgb(var(--border)/0.07)] bg-bg-deep">
+      <section className="section-pad section-tone-island">
         <div className="container-x">
           <SectionHeading
             eyebrow="First assessment"
@@ -125,7 +125,7 @@ export default function DownloadPage() {
       </section>
 
       {/* Changelog */}
-      <section className="section-pad border-t border-[rgb(var(--border)/0.07)]">
+      <section className="section-pad section-seam">
         <div className="container-x">
           <SectionHeading eyebrow="Changelog" title="What's new" />
           <div className="mx-auto mt-10 max-w-2xl">

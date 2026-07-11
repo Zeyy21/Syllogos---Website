@@ -31,7 +31,7 @@ export default function LiveAssessment() {
   const active = MODES[mode];
 
   return (
-    <section className="section-pad overflow-hidden border-y border-[rgb(var(--border)/0.07)] bg-bg-deep">
+    <section className="section-pad section-tone-enter overflow-hidden">
       <div className="container-x">
         <SectionHeading
           eyebrow="Assessment, made transparent"

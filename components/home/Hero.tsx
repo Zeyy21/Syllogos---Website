@@ -9,7 +9,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function Hero() {
   return (
-    <section className="hero-field relative min-h-[100svh] overflow-hidden border-b border-[rgb(var(--border)/0.07)]">
+    <section className="hero-field relative min-h-[100svh] overflow-hidden">
       {/* readability scrim behind the copy */}
       <div
         className="pointer-events-none absolute inset-0"

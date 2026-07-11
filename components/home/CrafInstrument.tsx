@@ -191,7 +191,7 @@ export default function CrafInstrument() {
   }).join(" ");
 
   return (
-    <section className="section-pad ruler-rule border-t border-[rgb(var(--border)/0.07)]">
+    <section className="section-pad section-seam ruler-rule">
       <div className="container-x">
         <div className="flex flex-col items-center text-center">
           <Reveal>

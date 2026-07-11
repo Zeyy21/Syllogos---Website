@@ -15,7 +15,7 @@ export default function CtaBanner({
   note = "Free to start. No credit card required. Windows & macOS.",
 }: Props) {
   return (
-    <section className="section-pad">
+    <section className="section-pad section-seam-quiet">
       <div className="container-x">
         <Reveal>
           <div className="relative overflow-hidden rounded-[1.5rem] acrylic-elevated px-6 py-16 text-center sm:px-12 sm:py-20">

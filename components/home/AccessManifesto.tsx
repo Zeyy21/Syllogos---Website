@@ -9,7 +9,7 @@ const PROMISES = [
 
 export default function AccessManifesto() {
   return (
-    <section className="section-pad relative overflow-hidden">
+    <section className="section-pad section-seam relative overflow-hidden">
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgb(var(--accent-soft)/0.08)]" />
       <div className="container-x relative">
         <Reveal>

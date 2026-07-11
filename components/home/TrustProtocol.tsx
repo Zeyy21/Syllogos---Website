@@ -21,7 +21,7 @@ const RULES = [
 
 export default function TrustProtocol() {
   return (
-    <section className="section-pad border-y border-[rgb(var(--border)/0.07)] bg-bg-deep">
+    <section className="section-pad section-seam-quiet section-tone-exit">
       <div className="container-x">
         <SectionHeading
           eyebrow="Human-led assessment"

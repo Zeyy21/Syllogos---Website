@@ -163,7 +163,7 @@ export default function FeaturesPage() {
       </section>
 
       {/* Eight Analysis Actions, dedicated section */}
-      <section className="section-pad border-y border-[rgb(var(--border)/0.07)]">
+      <section className="section-pad section-seam">
         <div className="container-x">
           <div className="grid items-center gap-9 lg:grid-cols-2 lg:gap-14">
             <Reveal>
@@ -194,7 +194,7 @@ export default function FeaturesPage() {
         </section>
       ))}
 
-      <section className="section-pad border-y border-[rgb(var(--border)/0.07)] bg-bg-deep">
+      <section className="section-pad section-tone-island">
         <div className="container-x">
           <SectionHeading
             eyebrow="Principles of assessment"

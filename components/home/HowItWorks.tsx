@@ -37,7 +37,7 @@ export default function HowItWorks() {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section className="section-pad border-t border-[rgb(var(--border)/0.07)]">
+    <section className="section-pad">
       <div className="container-x">
         <SectionHeading
           eyebrow="How it works"

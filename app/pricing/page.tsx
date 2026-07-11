@@ -135,7 +135,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="section-pad border-y border-[rgb(var(--border)/0.07)] bg-bg-deep">
+      <section className="section-pad section-tone-island">
         <div className="container-x">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
             <SectionHeading
@@ -163,7 +163,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="section-pad border-t border-[rgb(var(--border)/0.07)]">
+      <section className="section-pad section-seam">
         <div className="container-x">
           <SectionHeading eyebrow="FAQ" title="Questions, answered" />
           <div className="mx-auto mt-10 max-w-2xl">
