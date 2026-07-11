@@ -25,8 +25,8 @@ export default function HomePage() {
       <TrustStrip />
       <HowItWorks />
       <CtaBanner
-        eyebrow="Research rigor, within reach"
-        title="Better judgment should be available to everyone."
+        eyebrow="Democratizing Research"
+        title="Expert research evaluation should not remain inside closed academic circles."
         note="Free to start. No credit card required. Windows & macOS."
       />
     </PageTransition>

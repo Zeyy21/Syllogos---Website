@@ -7,24 +7,24 @@ import { IconArrowRight } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Syllogos makes research credibility legible through evidence-anchored assessment, scientific validation, and human-led judgment.",
+    "Syllogos democratizes research assessment by bringing expert evaluation logic into collaboration with human scholarly judgment.",
 };
 
 const STORY = [
   {
     eyebrow: "The problem",
-    title: "The literature grew. Human attention did not.",
-    body: "Millions of new papers arrive each year while retractions, reproducibility failures, predatory venues, and fabricated citations make the scholarly record harder to trust. Search engines can find a source. Chatbots can summarize it. Citation managers can file it. None of them answer the question that comes before every serious use of evidence: how much should I trust this, and why?",
+    title: "Expert evaluation remains difficult to access.",
+    body: "The rigorous standards used by leading Q1 journals are usually learned through years of peer review, critical reading, and academic practice inside specialized circles. Many capable researchers have not yet had access to that accumulated evaluative experience, even when they need to judge methodology, evidence, originality, coherence, sources, and bias with the same seriousness.",
   },
   {
     eyebrow: "The solution",
-    title: "Make credibility legible",
-    body: "Syllogos is the credibility layer for academic research: a desktop companion that reads the source in front of you and returns a structured, evidence-anchored assessment across ten dimensions. It works inside the reading workflow because judgment is most useful at the exact moment a researcher decides whether a claim belongs in the work.",
+    title: "Make expert assessment accessible",
+    body: "Syllogos makes the logic of experienced research evaluation faster, more structured, and easier to interpret. Through CRAF 4.0, it examines a study across ten connected dimensions and presents the evidence, strengths, weaknesses, limitations, quality band, and questions a researcher needs for a more informed scholarly decision.",
   },
   {
     eyebrow: "Our stance",
-    title: "Augmentation over automation",
-    body: "A credibility tool should never ask the researcher to surrender judgment. CRAF 4.0 was reformulated through more than twenty researcher surveys and is continuously tested against expert review. Every score must show evidence. Every discipline is judged on appropriate terms. Where evidence is insufficient, the system says Indeterminate. The human remains the final authority by design.",
+    title: "Collaboration over replacement",
+    body: "Syllogos does not automate scholarship or replace reviewers. Artificial intelligence organizes, analyzes, and presents evidence; the researcher brings context, interpretation, and final judgment. Five dialogic paradigms keep the assessment open to different epistemic assumptions, methodological choices, and traditions of knowledge.",
   },
 ];
 
@@ -54,10 +54,10 @@ export default function AboutPage() {
             eyebrow="About"
             title={
               <>
-                Trust is the product. <em>Rigor is how we earn it.</em>
+                Democratizing Research. <em>Keeping judgment human.</em>
               </>
             }
-            subtitle="Our mission is to make rigorous source judgment accessible to everyone. Every student, researcher, educator, and curious reader should be able to understand what deserves trust, why it deserves trust, and where uncertainty remains."
+            subtitle="Our mission is to make the evaluative logic of experienced Q1 reviewers available to a wider research community—clearly, transparently, and without taking final scholarly authority away from the researcher."
           />
         </div>
       </section>
@@ -65,11 +65,11 @@ export default function AboutPage() {
       <section className="section-pad border-y border-[rgb(var(--border)/0.07)] bg-bg-deep">
         <div className="container-x">
           <SectionHeading
-            eyebrow="The people behind the judgment"
+            eyebrow="The people behind the platform"
             index="04"
             align="left"
-            title={<>The build-and-trust <em>axis</em></>}
-            subtitle="Syllogos pairs product execution with independent scientific authority. The platform and the framework sharpen each other through a continuous human validation loop."
+            title={<>Technology and scholarship, <em>in dialogue</em></>}
+            subtitle="Syllogos brings product development and academic expertise together so the platform can be continuously tested, calibrated, questioned, and improved by researchers."
           />
           <div className="mt-11 grid gap-4 lg:grid-cols-2">
             {FOUNDERS.map((founder, i) => (
@@ -142,8 +142,8 @@ export default function AboutPage() {
                 </span>
               </p>
               <p className="pullquote mx-auto mt-4 max-w-md text-[clamp(1.05rem,1.8vw,1.25rem)] text-text-secondary">
-                &ldquo;A gathering&rdquo; where evidence, method, and human
-                judgment come together.
+                &ldquo;A gathering&rdquo; where artificial intelligence and human
+                academic expertise evaluate research together.
               </p>
             </div>
           </Reveal>
@@ -158,13 +158,12 @@ export default function AboutPage() {
               <div>
                 <span className="eyebrow">Get in touch</span>
                 <h3 className="mt-4 display-sm text-[clamp(1.4rem,2.8vw,2rem)] text-text">
-                  Research partnerships, team access, and honest feedback
+                  Research partnerships, beta participation, and precise feedback
                 </h3>
                 <p className="mt-3.5 max-w-md text-[0.925rem] leading-relaxed text-text-tertiary">
-                  Whether you are testing the beta, leading a research lab,
-                  studying research integrity, or exploring institutional
-                  adoption, we would like to hear how credibility is handled in
-                  your world.
+                  Tell us where an assessment works, where it needs adjustment,
+                  and which cases expose the limits of the framework. Researcher
+                  feedback is part of how Syllogos is calibrated and developed.
                 </p>
               </div>
               <div className="lg:justify-self-end">

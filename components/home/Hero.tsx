@@ -42,7 +42,7 @@ export default function Hero() {
             <span className="hidden items-center gap-2 sm:flex">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
               <span className="font-mono text-[0.66rem] uppercase tracking-[0.16em] text-text-tertiary">
-                the credibility layer
+                democratizing research
               </span>
             </span>
           </motion.div>
@@ -55,7 +55,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.12, ease }}
             >
-              Read everything.
+              Read as a researcher.
             </motion.span>
             <motion.span
               className="block"
@@ -63,7 +63,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.26, ease }}
             >
-              <em>Trust selectively.</em>
+              <em>Evaluate as a reviewer.</em>
             </motion.span>
           </h1>
 
@@ -73,9 +73,10 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.5, ease }}
             className="mt-6 max-w-lg text-[1.06rem] leading-relaxed text-text-secondary"
           >
-            Syllogos gives every student, researcher, and curious reader access
-            to evidence-anchored, discipline-aware source assessment. See how
-            much to trust a paper, why, and where the evidence leads.
+            Syllogos brings the evaluative logic of an experienced Q1 peer-review
+            committee to every researcher. It organizes the evidence, tests the
+            study across ten dimensions, and leaves the final scholarly judgment
+            in human hands.
           </motion.p>
 
           <motion.div
@@ -89,7 +90,7 @@ export default function Hero() {
               <IconArrowRight width={16} height={16} />
             </MagneticButton>
             <MagneticButton href="/features" variant="secondary">
-              See CRAF in action
+              Explore the assessment
             </MagneticButton>
           </motion.div>
 
@@ -99,7 +100,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.74, ease }}
             className="mt-4 font-mono text-[0.72rem] tracking-[0.04em] text-text-tertiary"
           >
-            Free tier · No credit card · Your judgment stays in command
+            AI provides the analysis · You provide the understanding
           </motion.p>
 
           {/* Spec tokens form a measured strip with mono labels and tick nodes */}
@@ -110,10 +111,10 @@ export default function Hero() {
             className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-2"
           >
             {[
-              ["EVIDENCE", "Quoted passages"],
-              ["DIMENSIONS", "10 calibrated"],
-              ["ACTIONS", "8 reviewer-grade"],
-              ["UNCERTAINTY", "Indeterminate"],
+              ["FRAMEWORK", "CRAF 4.0"],
+              ["DIMENSIONS", "10 evaluated"],
+              ["BANDS", "5 quality levels"],
+              ["JUDGMENT", "Human-led"],
             ].map(([k, v]) => (
               <span key={k} className="flex items-center gap-2">
                 <span className="h-1 w-1 rounded-full bg-accent" aria-hidden="true" />

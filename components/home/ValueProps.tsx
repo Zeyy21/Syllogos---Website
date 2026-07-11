@@ -48,15 +48,15 @@ export default function ValueProps() {
     <section className="section-pad">
       <div className="container-x">
         <SectionHeading
-          eyebrow="A category of its own"
+          eyebrow="Beyond summarization"
           index="01"
           align="left"
           title={
             <>
-              Search finds the paper. <em>Syllogos judges it.</em>
+              A paper is more than its findings. <em>Evaluate its quality.</em>
             </>
           }
-          subtitle="The research stack can retrieve, summarize, and organize. Syllogos fills the missing layer: a rigorous read on whether the source deserves your trust."
+          subtitle="Syllogos approaches research as an experienced reviewer would: examining methods, evidence, originality, theory, literature, sources, writing, peer status, bias, and scholarly legitimacy."
         />
 
         {/* Bento grid, deliberately asymmetric */}
@@ -74,12 +74,12 @@ export default function ValueProps() {
                   </span>
                 </div>
                 <h3 className="mt-6 display-sm text-[1.35rem] text-text">
-                    It meets you inside the reading habit
+                    Assessment begins where reading happens
                 </h3>
                 <p className="mt-2.5 max-w-md text-[0.9rem] leading-relaxed text-text-tertiary">
-                  Open a paper in a browser, PDF reader, or academic platform.
-                  Syllogos detects it, retrieves the full text, and prepares the
-                  source for assessment without breaking your concentration.
+                  Bring in a screen, PDF, DOI, file, or pasted text. Syllogos
+                  organizes the material for assessment without forcing you to
+                  rebuild your workflow around the application.
                 </p>
                 {/* decorative scanning line */}
                 <div className="mt-6 flex-1">
@@ -121,12 +121,12 @@ export default function ValueProps() {
                   </span>
                 </div>
                 <h3 className="mt-6 display-sm text-[1.35rem] text-text">
-                    Peer-reviewer depth, one action away
+                    Q1 reviewer logic, made accessible
                 </h3>
                 <p className="mt-2.5 text-[0.9rem] leading-relaxed text-text-tertiary">
-                  Probe methods, weigh novelty, audit citations, surface bias,
-                  or run all ten CRAF dimensions. Every deep action returns a
-                  structured judgment with its evidence attached.
+                  Examine methods, validity, novelty, coherence, sources, bias,
+                  or run the complete CRAF 4.0 assessment. Each action turns
+                  expert review criteria into a structured scholarly reading.
                 </p>
                 <div className="mt-auto grid grid-cols-4 gap-1.5 pt-6">
                   {Array.from({ length: 8 }).map((_, i) => (
@@ -157,12 +157,12 @@ export default function ValueProps() {
                     </span>
                   </div>
                   <h3 className="mt-6 display-sm text-[1.35rem] text-text">
-                    Augmentation, not automation
+                    Collaboration, not replacement
                   </h3>
                   <p className="mt-2.5 max-w-lg text-[0.9rem] leading-relaxed text-text-tertiary">
-                    Frameless, always on top, and summoned with a keystroke.
-                    Syllogos does not replace scholarly judgment; it gives that
-                    judgment a faster, more consistent first reading.
+                    Artificial intelligence organizes and analyzes the evidence;
+                    the researcher interprets it, questions it, and decides what
+                    it means. Final scholarly judgment always remains human.
                   </p>
                 </div>
                 {/* spec readout with measured facts in mono */}
@@ -171,7 +171,7 @@ export default function ValueProps() {
                     ["SUMMON", "Ctrl ⇧ Space"],
                     ["FOOTPRINT", "~85 MB"],
                     ["DETECTION", "OCR + title"],
-                    ["OUTPUT", "Evidence first"],
+                    ["OUTPUT", "Researcher-led"],
                   ].map(([k, v]) => (
                     <div
                       key={k}

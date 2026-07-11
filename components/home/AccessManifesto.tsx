@@ -1,10 +1,10 @@
 import Reveal from "../Reveal";
 
 const PROMISES = [
-  ["01", "Same evidence", "Every reader sees the passages behind the judgment."],
-  ["02", "Same standard", "The framework does not change with status or institution."],
-  ["03", "Visible reasoning", "Scores become understandable, teachable, and open to challenge."],
-  ["04", "Human authority", "The final interpretation always belongs to the person doing the research."],
+  ["01", "Expert logic", "The habits of experienced Q1 reviewers become visible and learnable."],
+  ["02", "Structured evidence", "Every assessment connects its reasoning to the study in front of you."],
+  ["03", "Multiple perspectives", "Five research paradigms open each assessment to dialogue and challenge."],
+  ["04", "Human judgment", "The researcher remains the final scholarly authority by design."],
 ];
 
 export default function AccessManifesto() {
@@ -14,15 +14,15 @@ export default function AccessManifesto() {
       <div className="container-x relative">
         <Reveal>
           <div className="mx-auto max-w-4xl text-center">
-            <span className="readout">Research, opened</span>
+            <span className="readout">Democratizing Research</span>
             <h2 className="mt-6 display text-[clamp(2.3rem,5.4vw,4.35rem)] text-text">
-              Rigor should not depend on <em>privilege or proximity.</em>
+              Expert assessment should not remain <em>inside closed circles.</em>
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-[1rem] leading-relaxed text-text-secondary sm:text-[1.08rem]">
-              Expert source evaluation has long depended on time, training,
-              institutional access, and who is available to ask. Syllogos makes
-              those habits of judgment visible and accessible to every student,
-              researcher, educator, and curious reader.
+              The standards used by leading academic reviewers are usually
+              learned through years of peer review and specialized practice.
+              Syllogos makes that evaluative logic more accessible, structured,
+              and easier to interpret for researchers at every stage.
             </p>
           </div>
         </Reveal>

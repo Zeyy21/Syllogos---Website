@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default function CtaBanner({
-  eyebrow = "Get started",
+  eyebrow = "Democratizing Research",
   title,
   note = "Free to start. No credit card required. Windows & macOS.",
 }: Props) {
@@ -42,7 +42,7 @@ export default function CtaBanner({
                   <IconArrowRight width={16} height={16} />
                 </MagneticButton>
                 <MagneticButton href="/features" variant="secondary">
-                  Explore Features
+                  Explore Assessment
                 </MagneticButton>
               </div>
               <p className="mt-5 text-[0.825rem] text-text-tertiary">{note}</p>

@@ -24,8 +24,8 @@ export default function Footer() {
           <div className="max-w-xs">
             <Logo />
             <p className="mt-4 max-w-[16rem] font-serif text-[0.95rem] italic leading-relaxed text-text-tertiary">
-              The credibility layer for academic research. Rigorous source
-              judgment made visible, teachable, and accessible to everyone.
+              Democratizing Research. The evaluative logic of experienced Q1
+              reviewers, made structured, transparent, and accessible.
             </p>
             <div className="mt-5 flex gap-2">
               {SOCIALS.map(({ label, href, Icon }) => (

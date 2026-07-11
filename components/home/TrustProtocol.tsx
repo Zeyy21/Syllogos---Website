@@ -4,18 +4,18 @@ import SectionHeading from "../SectionHeading";
 const RULES = [
   {
     n: "01",
-    label: "Evidence is mandatory",
-    body: "Every score points back to quoted passages in the source. A score without evidence is rejected, not displayed.",
+    label: "Evidence before conclusion",
+    body: "The assessment explains what in the study supports each finding, so its reasoning can be reviewed rather than accepted blindly.",
   },
   {
     n: "02",
-    label: "Discipline changes the rubric",
-    body: "A theoretical humanities paper is not penalized for lacking a control group. CRAF adapts its weighting to the work in front of it.",
+    label: "Context shapes evaluation",
+    body: "Research is assessed in relation to its field, epistemic assumptions, methods, and the traditions of knowledge in which it operates.",
   },
   {
     n: "03",
-    label: "Uncertainty stays visible",
-    body: "When the paper does not support a judgment, Syllogos returns Indeterminate rather than inventing a reassuring midpoint.",
+    label: "Limits remain visible",
+    body: "Possible bias, missing evidence, methodological limits, and unresolved questions remain part of the report instead of being hidden by a score.",
   },
 ];
 
@@ -24,15 +24,15 @@ export default function TrustProtocol() {
     <section className="section-pad border-y border-[rgb(var(--border)/0.07)] bg-bg-deep">
       <div className="container-x">
         <SectionHeading
-          eyebrow="The trust protocol"
+          eyebrow="Human-led assessment"
           index="03"
           align="left"
           title={
             <>
-              Designed to resist the easy <em>answer</em>
+              Built for scholarly <em>judgment, not blind trust</em>
             </>
           }
-          subtitle="General AI is optimized to respond. Syllogos is engineered to judge carefully, show its working, and decline when the evidence runs out."
+          subtitle="Syllogos does not ask researchers to surrender judgment to AI. It organizes evidence, explains the assessment, and opens every conclusion to review, dialogue, and challenge."
         />
 
         <div className="mt-12 grid gap-4 lg:grid-cols-[0.95fr_1.05fr]">

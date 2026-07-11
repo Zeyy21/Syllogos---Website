@@ -44,22 +44,22 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Syllogos | The credibility layer for academic research",
+    default: "Syllogos | Democratizing Research",
     template: "%s · Syllogos",
   },
   description:
-    "Syllogos makes rigorous source judgment accessible to everyone through evidence-anchored, discipline-aware assessment.",
+    "Syllogos makes Q1-level research assessment more accessible through collaboration between artificial intelligence and human academic expertise.",
   keywords: [
     "research tool",
     "academic AI",
-    "credibility assessment",
+    "Q1 research assessment",
     "CRAF",
     "desktop research",
   ],
   openGraph: {
-    title: "Syllogos | The credibility layer for academic research",
+    title: "Syllogos | Democratizing Research",
     description:
-      "Evidence-anchored, discipline-aware credibility assessment for the source in front of you.",
+      "The evaluative logic of experienced academic reviewers, made structured, transparent, and accessible.",
     type: "website",
   },
 };

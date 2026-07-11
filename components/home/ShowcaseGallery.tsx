@@ -30,49 +30,49 @@ const SLIDES: Slide[] = [
   {
     id: "idle",
     eyebrow: "Idle",
-    title: "A quiet surface, ready when you are",
+    title: "Assessment available inside the reading moment",
     caption:
-      "Frameless acrylic shell that floats above your desktop. Nothing demands attention until there's something worth saying.",
+      "Open Syllogos over the source when you need it, then hide it without interrupting the work in front of you.",
     alt: "Syllogos desktop app idle state with a frameless overlay, empty paste surface, and sidebar",
   },
   {
     id: "actionmenu",
     eyebrow: "Contextual analysis",
-    title: "Eight one-click actions on any paper",
+    title: "Eight ways to assess a study",
     caption:
-      "Paste or auto-detect a paper and Syllogos surfaces a contextual panel of analytical actions: fast for quick understanding and deep for rigorous critique.",
+      "Move from context and key points to methods, validity, contribution, coherence, sources, bias, and a complete integrated assessment.",
     alt: "Syllogos desktop app with captured research context and the CRAF 4.0 action menu below",
   },
   {
     id: "labs",
     eyebrow: "Labs · Beta",
-    title: "Conversational research, on demand",
+    title: "One assessment, five research paradigms",
     caption:
-      "Labs opens a grounded Q&A panel over your loaded paper. Ask follow-up questions, probe the methods, and challenge the findings without leaving the analysis.",
+      "Question the assessment through Positivist, Post-Positivist, Constructivist, Critical, and Pragmatist perspectives.",
     alt: "Syllogos Labs conversational Q&A panel open over a loaded research paper with context rail",
   },
   {
     id: "bookmarks",
     eyebrow: "Saved research",
-    title: "A library that ranks itself by what matters",
+    title: "Keep each assessment with its source",
     caption:
-      "Bookmark any result. Color-coded cards make the action type and credibility at-a-glance obvious, sortable, and persistent across sessions.",
+      "Save results with their assessment type, quality band, confidence, and evidence so the reasoning remains available for later review.",
     alt: "Syllogos Saved Research library with color-coded bookmarked analyses",
   },
   {
     id: "insights",
     eyebrow: "Insights dashboard",
-    title: "A profile that learns how you read",
+    title: "See the pattern across your research",
     caption:
-      "Field distribution, credibility spread, confidence breakdown, and recurring keyword trends form a quiet mirror of your research behavior.",
-    alt: "Syllogos Insights dashboard with field distribution, credibility spread and keywords",
+      "Review fields, quality bands, confidence levels, and recurring concepts across the body of work you have assessed.",
+    alt: "Syllogos Insights dashboard with field distribution, quality-band spread and keywords",
   },
   {
     id: "settings",
     eyebrow: "Settings",
-    title: "Tuned for how you actually work",
+    title: "A workflow that stays under your control",
     caption:
-      "Detection sensitivity, full-text fetch sources, theme, language, and a full keyboard-shortcut system keep every control within reach.",
+      "Control detection, content retrieval, language, appearance, and keyboard shortcuts while keeping the researcher in command.",
     alt: "Syllogos settings panel with detection, fetch, appearance and keyboard shortcut options",
   },
 ];
@@ -158,15 +158,15 @@ export default function ShowcaseGallery() {
     >
       <div className="container-x">
         <SectionHeading
-          eyebrow="A guided tour"
+          eyebrow="Assessment in practice"
           index="04"
           align="center"
           title={
             <>
-              Six windows into <em>how Syllogos reads with you</em>
+              Six windows into <em>human-AI research evaluation</em>
             </>
           }
-          subtitle="Each capture is a real frame of the desktop app with the same acrylic surfaces, warm gold accent, and quiet typography. Nothing is mocked up or dressed up for the screenshot."
+          subtitle="From first input to dialogic review, each screen supports one purpose: making rigorous research assessment clearer, faster, and more accessible."
         />
 
         <div

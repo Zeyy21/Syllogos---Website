@@ -35,8 +35,8 @@ export default function Showcase() {
           <p className="mx-auto mt-6 flex max-w-lg flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center">
             <span className="figure-label">Fig. 01</span>
             <span className="figure-caption text-[0.875rem]">
-              One source, eight ways to interrogate it without leaving the
-              page you are already reading.
+              Eight assessment workflows and source comparison, available
+              without leaving the material you are reading.
             </span>
           </p>
         </Reveal>

@@ -8,7 +8,7 @@ import { IconWindows, IconApple, IconArrowRight } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "Download",
   description:
-    "Download Syllogos for Windows and macOS. Start on the free plan with no credit card required.",
+    "Download Syllogos and bring structured, Q1-style research assessment into your everyday reading workflow.",
 };
 
 const PLATFORMS = [
@@ -29,7 +29,7 @@ const PLATFORMS = [
 const CHANGELOG = [
   {
     q: "What's new in v2.0.0",
-    a: "CRAF 4.0 credibility framework with 10 weighted governance dimensions and auto-detected discipline grounding. Eight analysis actions split into fast and deep tiers. Real-time streaming results with progressive blur-to-sharp card reveals. Labs (beta) brings conversational Q&A to your loaded research context. A redesigned Insights Dashboard adds field distribution and keyword trends. Automatic detection now covers 18+ academic platforms.",
+    a: "CRAF 4.0 research-assessment framework with 10 weighted dimensions and discipline grounding. Eight analysis actions span quick orientation and deep evaluation. Real-time streaming results reveal the report progressively. Labs (beta) brings dialogic Q&A to the loaded research context, while the redesigned Insights Dashboard adds field distribution and keyword trends. Automatic detection now covers 18+ academic platforms.",
   },
   {
     q: "v1.6.2 | Stability & detection",
@@ -50,10 +50,10 @@ export default function DownloadPage() {
             eyebrow="Download"
             title={
               <>
-                Put the credibility layer <em>beside you</em>
+                Put expert evaluation logic <em>beside your reading</em>
               </>
             }
-            subtitle="Install the desktop companion, open a source, and run your first evidence-anchored assessment in minutes. The free plan needs no credit card."
+            subtitle="Install Syllogos, bring in a screen, file, DOI, or text, and begin a structured CRAF 4.0 assessment without leaving the material you are reading."
           />
         </div>
       </section>
@@ -104,13 +104,13 @@ export default function DownloadPage() {
         <div className="container-x">
           <SectionHeading
             eyebrow="First assessment"
-            title={<>From install to evidence in <em>three moves</em></>}
+            title={<>From source to scholarly evaluation in <em>three moves</em></>}
           />
           <div className="mx-auto mt-11 grid max-w-4xl gap-3 md:grid-cols-3">
             {[
-              ["01", "Open a source", "Use a browser, PDF reader, DOI, file, screenshot, or pasted text."],
-              ["02", "Choose the question", "Start fast, inspect methods, audit sources, surface bias, or run all ten dimensions."],
-              ["03", "Follow the evidence", "Inspect the score, confidence, limitations, and the quoted passages behind the judgment."],
+              ["01", "Bring in the source", "Use the screen, a PDF or file, a DOI, or pasted text."],
+              ["02", "Choose the evaluation", "Orient quickly, examine one dimension, run the full assessment, or compare sources."],
+              ["03", "Make the judgment", "Review the evidence, quality band, strengths, weaknesses, limitations, and open questions."],
             ].map(([n, title, body], i) => (
               <Reveal key={n} delay={i * 0.06}>
                 <article className="h-full rounded-[1.15rem] acrylic p-6">

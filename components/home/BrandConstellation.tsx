@@ -116,7 +116,7 @@ export default function BrandConstellation() {
       >
         <span className="h-2 w-2 rounded-full bg-accent" />
         <span className="font-mono text-[0.6rem] uppercase tracking-[0.18em] text-text-secondary">
-          evidence connected · judgment calibrated
+          evidence organized · judgment human-led
         </span>
       </motion.div>
     </div>
