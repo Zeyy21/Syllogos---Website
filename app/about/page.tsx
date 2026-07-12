@@ -3,28 +3,29 @@ import PageTransition from "@/components/PageTransition";
 import SectionHeading from "@/components/SectionHeading";
 import Reveal from "@/components/Reveal";
 import { IconArrowRight } from "@/components/Icons";
+import AboutHeroVisual from "@/components/about/AboutHeroVisual";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Syllogos democratizes research assessment by bringing expert evaluation logic into collaboration with human scholarly judgment.",
+    "Syllogos makes structured assessment of research quality more accessible while keeping interpretation and scholarly responsibility with the researcher.",
 };
 
 const STORY = [
   {
     eyebrow: "The problem",
-    title: "Expert evaluation remains difficult to access.",
-    body: "The rigorous standards used by leading Q1 journals are usually learned through years of peer review, critical reading, and academic practice inside specialized circles. Many capable researchers have not yet had access to that accumulated evaluative experience, even when they need to judge methodology, evidence, originality, coherence, sources, and bias with the same seriousness.",
+    title: "Rigorous evaluation takes time and experience.",
+    body: "The practices used to evaluate submissions at leading journals, including journals ranked in the first quartile (Q1), develop through years of peer review, critical reading, methodological training, and disciplinary practice. Making those criteria explicit can help researchers examine methodology, evidence, originality, coherence, sources, and potential bias more systematically.",
   },
   {
     eyebrow: "The solution",
-    title: "Make expert assessment accessible",
-    body: "Syllogos makes the logic of experienced research evaluation faster, more structured, and easier to interpret. Through CRAF 4.0, it examines a study across ten connected dimensions and presents the evidence, strengths, weaknesses, limitations, quality band, and questions a researcher needs for a more informed scholarly decision.",
+    title: "Make evaluative criteria explicit",
+    body: "Syllogos makes research appraisal more structured, transparent, and easier to examine. Through CRAF 4.0, it assesses a study across ten connected dimensions and presents the evidence, strengths, weaknesses, limitations, quality band, and questions that support a more informed scholarly interpretation.",
   },
   {
     eyebrow: "Our stance",
     title: "Collaboration over replacement",
-    body: "Syllogos does not automate scholarship or replace reviewers. Artificial intelligence organizes, analyzes, and presents evidence; the researcher brings context, interpretation, and final judgment. Five dialogic paradigms keep the assessment open to different epistemic assumptions, methodological choices, and traditions of knowledge.",
+    body: "Syllogos does not automate scholarship or replace reviewers. Artificial intelligence organizes, analyzes, and presents evidence; the researcher contributes disciplinary context, interpretation, and critical scrutiny. Five dialogic paradigms keep the assessment open to different epistemic assumptions, methodological choices, and traditions of knowledge.",
   },
 ];
 
@@ -48,17 +49,19 @@ const FOUNDERS = [
 export default function AboutPage() {
   return (
     <PageTransition>
-      <section className="pb-2 pt-36">
-        <div className="container-x">
+      <section className="pb-12 pt-32 sm:pb-16 sm:pt-36">
+        <div className="container-x grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
           <SectionHeading
             eyebrow="About"
+            align="left"
             title={
               <>
-                Democratizing Research. <em>Keeping judgment human.</em>
+                Making rigorous assessment accessible. <em>Keeping interpretation researcher-led.</em>
               </>
             }
-            subtitle="Our mission is to make the evaluative logic of experienced Q1 reviewers available to a wider research community—clearly, transparently, and without taking final scholarly authority away from the researcher."
+            subtitle="Our mission is to make rigorous research-evaluation methods more accessible—clearly, transparently, and without displacing the researcher&rsquo;s interpretive responsibility."
           />
+          <AboutHeroVisual />
         </div>
       </section>
 
@@ -166,16 +169,29 @@ export default function AboutPage() {
                   feedback is part of how Syllogos is calibrated and developed.
                 </p>
               </div>
-              <div className="lg:justify-self-end">
+              <div className="flex flex-col gap-2.5 lg:justify-self-end">
                 <a
-                  href="mailto:hello@syllogos.app"
+                  href="mailto:zeyyad@syllogos.io"
                   className="group inline-flex cursor-pointer items-center gap-1.5 rounded-xl btn-primary px-5 py-2.5 font-mono text-[0.85rem]"
                 >
-                  hello@syllogos.app
+                  <span className="text-[0.62rem] uppercase tracking-[0.14em] opacity-70">CEO</span>
+                  <span>zeyyad@syllogos.io</span>
                   <IconArrowRight
                     width={16}
                     height={16}
                     className="transition-transform duration-300 group-hover:translate-x-0.5"
+                  />
+                </a>
+                <a
+                  href="mailto:wael@syllogos.io"
+                  className="group inline-flex cursor-pointer items-center gap-1.5 rounded-xl btn-secondary px-5 py-2.5 font-mono text-[0.85rem]"
+                >
+                  <span className="text-[0.62rem] uppercase tracking-[0.14em] opacity-70">CSO</span>
+                  <span>wael@syllogos.io</span>
+                  <IconArrowRight
+                    width={16}
+                    height={16}
+                    className="ml-auto transition-transform duration-300 group-hover:translate-x-0.5"
                   />
                 </a>
               </div>

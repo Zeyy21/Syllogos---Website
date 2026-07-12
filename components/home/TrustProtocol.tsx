@@ -5,7 +5,7 @@ const RULES = [
   {
     n: "01",
     label: "Evidence before conclusion",
-    body: "The assessment explains what in the study supports each finding, so its reasoning can be reviewed rather than accepted blindly.",
+    body: "The assessment identifies what in the study supports each finding, so its reasoning can be examined rather than accepted uncritically.",
   },
   {
     n: "02",
@@ -29,10 +29,10 @@ export default function TrustProtocol() {
           align="left"
           title={
             <>
-              Built for scholarly <em>judgment, not blind trust</em>
+              Built for transparent <em>assessment, not automatic conclusions</em>
             </>
           }
-          subtitle="Syllogos does not ask researchers to surrender judgment to AI. It organizes evidence, explains the assessment, and opens every conclusion to review, dialogue, and challenge."
+          subtitle="Syllogos does not present AI output as a definitive conclusion. It organizes evidence, explains the assessment, and keeps every finding open to review, dialogue, and challenge."
         />
 
         <div className="mt-12 grid gap-4 lg:grid-cols-[0.95fr_1.05fr]">

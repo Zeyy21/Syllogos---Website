@@ -208,8 +208,8 @@ export default function CrafInstrument() {
             <p className="mx-auto mt-5 max-w-xl text-balance text-[0.975rem] leading-relaxed text-text-secondary">
               CRAF 4.0 does not reduce a study to an isolated score. It connects
               methodology, validity, contribution, theory, literature, sources,
-              writing, peer status, bias, and legitimacy in one multidimensional
-              assessment.
+              writing, peer status, bias, and institutional or ethical standards
+              in one multidimensional assessment.
             </p>
           </Reveal>
         </div>

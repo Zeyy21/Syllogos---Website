@@ -56,7 +56,7 @@ export default function ValueProps() {
               A paper is more than its findings. <em>Evaluate its quality.</em>
             </>
           }
-          subtitle="Syllogos approaches research as an experienced reviewer would: examining methods, evidence, originality, theory, literature, sources, writing, peer status, bias, and scholarly legitimacy."
+          subtitle="CRAF 4.0 examines methods, evidence, originality, theory, literature, sources, writing, peer-review status, reflexivity, and ethical or institutional standards in one structured assessment."
         />
 
         {/* Bento grid, deliberately asymmetric */}
@@ -121,12 +121,12 @@ export default function ValueProps() {
                   </span>
                 </div>
                 <h3 className="mt-6 display-sm text-[1.35rem] text-text">
-                    Q1 reviewer logic, made accessible
+                    Peer-review criteria, made explicit
                 </h3>
                 <p className="mt-2.5 text-[0.9rem] leading-relaxed text-text-tertiary">
                   Examine methods, validity, novelty, coherence, sources, bias,
-                  or run the complete CRAF 4.0 assessment. Each action turns
-                  expert review criteria into a structured scholarly reading.
+                  or run the complete CRAF 4.0 assessment. Each action presents
+                  its criteria, evidence, and limitations in a structured form.
                 </p>
                 <div className="mt-auto grid grid-cols-4 gap-1.5 pt-6">
                   {Array.from({ length: 8 }).map((_, i) => (
@@ -161,8 +161,8 @@ export default function ValueProps() {
                   </h3>
                   <p className="mt-2.5 max-w-lg text-[0.9rem] leading-relaxed text-text-tertiary">
                     Artificial intelligence organizes and analyzes the evidence;
-                    the researcher interprets it, questions it, and decides what
-                    it means. Final scholarly judgment always remains human.
+                    the researcher examines the result, supplies disciplinary
+                    context, and remains responsible for its interpretation.
                   </p>
                 </div>
                 {/* spec readout with measured facts in mono */}

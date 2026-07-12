@@ -8,7 +8,7 @@ import { IconWindows, IconApple, IconArrowRight } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "Download",
   description:
-    "Download Syllogos and bring structured, Q1-style research assessment into your everyday reading workflow.",
+    "Download Syllogos and bring structured, peer-review-informed research assessment into your everyday reading workflow.",
 };
 
 const PLATFORMS = [
@@ -50,7 +50,7 @@ export default function DownloadPage() {
             eyebrow="Download"
             title={
               <>
-                Put expert evaluation logic <em>beside your reading</em>
+                Bring structured assessment <em>into your reading workflow</em>
               </>
             }
             subtitle="Install Syllogos, bring in a screen, file, DOI, or text, and begin a structured CRAF 4.0 assessment without leaving the material you are reading."
@@ -110,7 +110,7 @@ export default function DownloadPage() {
             {[
               ["01", "Bring in the source", "Use the screen, a PDF or file, a DOI, or pasted text."],
               ["02", "Choose the evaluation", "Orient quickly, examine one dimension, run the full assessment, or compare sources."],
-              ["03", "Make the judgment", "Review the evidence, quality band, strengths, weaknesses, limitations, and open questions."],
+              ["03", "Interpret the report", "Review the evidence, quality band, strengths, weaknesses, limitations, and open questions."],
             ].map(([n, title, body], i) => (
               <Reveal key={n} delay={i * 0.06}>
                 <article className="h-full rounded-[1.15rem] acrylic p-6">

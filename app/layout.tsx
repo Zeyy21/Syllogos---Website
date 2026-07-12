@@ -48,18 +48,18 @@ export const metadata: Metadata = {
     template: "%s · Syllogos",
   },
   description:
-    "Syllogos makes Q1-level research assessment more accessible through collaboration between artificial intelligence and human academic expertise.",
+    "Syllogos supports structured assessment of research quality through CRAF 4.0, evidence-linked analysis, and researcher-led interpretation.",
   keywords: [
     "research tool",
     "academic AI",
-    "Q1 research assessment",
+    "research quality assessment",
     "CRAF",
     "desktop research",
   ],
   openGraph: {
     title: "Syllogos | Democratizing Research",
     description:
-      "The evaluative logic of experienced academic reviewers, made structured, transparent, and accessible.",
+      "Structured, evidence-linked research assessment informed by established peer-review criteria.",
     type: "website",
   },
 };

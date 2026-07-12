@@ -44,7 +44,7 @@ export default function HowItWorks() {
           index="05"
           title={
             <>
-              From source to <em>informed scholarly judgment</em>
+              From source to <em>informed scholarly interpretation</em>
             </>
           }
           subtitle="A continuous path from reading to structured evaluation, dialogue, comparison, and a better-informed research decision."

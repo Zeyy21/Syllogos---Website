@@ -38,7 +38,7 @@ export default function LiveAssessment() {
           index="02"
           align="left"
           title={<>See how expert evaluation <em>takes shape</em></>}
-          subtitle="Like an experienced review committee, Syllogos examines the evidence before reaching a conclusion: criteria first, quality band next, and an explained assessment for the researcher to interpret."
+          subtitle="Syllogos follows a transparent appraisal sequence: identify the evidence, apply explicit criteria, determine the quality band, and present an assessment for the researcher to examine."
         />
 
         <div
@@ -50,7 +50,7 @@ export default function LiveAssessment() {
             <div className="flex items-center gap-3">
               <span className="h-2 w-2 rounded-full bg-accent" />
               <span className="font-mono text-[0.62rem] uppercase tracking-[0.17em] text-text-secondary">
-                Q1-style assessment in progress
+                Structured assessment in progress
               </span>
               <span className="hidden font-mono text-[0.58rem] text-text-tertiary sm:inline">CRAF / 4.0.0</span>
             </div>
@@ -168,7 +168,7 @@ export default function LiveAssessment() {
                         <div key={k} className="rounded-xl border border-[rgb(var(--border)/0.08)] bg-bg/35 p-3"><div className="font-mono text-[0.52rem] uppercase tracking-[0.12em] text-text-tertiary">{k}</div><div className="numeral mt-1.5 text-[0.82rem] text-text">{v}</div></div>
                       ))}
                     </div>
-                    <p className="mt-6 max-w-sm text-[0.82rem] leading-relaxed text-text-tertiary">Strong methodological foundations with a minor reporting gap. The limitation remains visible for the researcher&rsquo;s final judgment.</p>
+                    <p className="mt-6 max-w-sm text-[0.82rem] leading-relaxed text-text-tertiary">Strong methodological foundations with a minor reporting gap. The limitation remains visible for the researcher&rsquo;s interpretation.</p>
                   </motion.div>
                 )}
               </AnimatePresence>

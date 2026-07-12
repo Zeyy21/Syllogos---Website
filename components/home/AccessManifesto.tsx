@@ -1,10 +1,10 @@
 import Reveal from "../Reveal";
 
 const PROMISES = [
-  ["01", "Expert logic", "The habits of experienced Q1 reviewers become visible and learnable."],
+  ["01", "Review-informed criteria", "The questions used in rigorous peer review become explicit and learnable."],
   ["02", "Structured evidence", "Every assessment connects its reasoning to the study in front of you."],
   ["03", "Multiple perspectives", "Five research paradigms open each assessment to dialogue and challenge."],
-  ["04", "Human judgment", "The researcher remains the final scholarly authority by design."],
+  ["04", "Researcher responsibility", "Interpretation and research decisions remain with the researcher."],
 ];
 
 export default function AccessManifesto() {
@@ -16,13 +16,13 @@ export default function AccessManifesto() {
           <div className="mx-auto max-w-4xl text-center">
             <span className="readout">Democratizing Research</span>
             <h2 className="mt-6 display text-[clamp(2.3rem,5.4vw,4.35rem)] text-text">
-              Expert assessment should not remain <em>inside closed circles.</em>
+              Rigorous assessment should be <em>accessible to more researchers.</em>
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-[1rem] leading-relaxed text-text-secondary sm:text-[1.08rem]">
-              The standards used by leading academic reviewers are usually
-              learned through years of peer review and specialized practice.
-              Syllogos makes that evaluative logic more accessible, structured,
-              and easier to interpret for researchers at every stage.
+              Critical appraisal develops through sustained peer review,
+              methodological training, and disciplinary practice. Syllogos makes
+              those evaluative criteria more explicit and easier to apply while
+              preserving the researcher&rsquo;s responsibility for interpretation.
             </p>
           </div>
         </Reveal>

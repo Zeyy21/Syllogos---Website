@@ -16,7 +16,7 @@ const TIERS = [
     name: "Free",
     price: "$0",
     period: "/ forever",
-    tagline: "Begin evaluating research with expert logic.",
+    tagline: "Begin evaluating research with a clear framework.",
     cta: "Start free",
     ctaHref: "/download",
     note: "No credit card required",
@@ -82,7 +82,7 @@ const TIERS = [
 const FAQ = [
   {
     q: "What counts as a deep assessment?",
-    a: "Methods & Validity, Novelty & Contribution, Coherence & Clarity, Sources & Peer Review, Bias & Legitimacy, and Full Assessment apply expert evaluation criteria in greater depth. Context summaries and key-point extraction remain light orientation actions.",
+    a: "Methods & Validity, Novelty & Contribution, Coherence & Clarity, Sources & Peer Review, Bias & Legitimacy, and Full Assessment apply CRAF criteria in greater depth. Context summaries and key-point extraction remain light orientation actions.",
   },
   {
     q: "What happens when I reach my allowance?",

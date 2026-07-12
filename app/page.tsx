@@ -26,7 +26,7 @@ export default function HomePage() {
       <HowItWorks />
       <CtaBanner
         eyebrow="Democratizing Research"
-        title="Expert research evaluation should not remain inside closed academic circles."
+        title="Rigorous research assessment should be accessible throughout the research community."
         note="Free to start. No credit card required. Windows & macOS."
       />
     </PageTransition>

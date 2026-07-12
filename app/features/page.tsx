@@ -10,7 +10,7 @@ import AppShot from "@/components/AppShot";
 export const metadata: Metadata = {
   title: "Features",
   description:
-    "Q1-style research evaluation through CRAF 4.0, eight assessment workflows, source comparison, and five dialogic paradigms.",
+    "Peer-review-informed research assessment through CRAF 4.0, eight analytical workflows, source comparison, and five dialogic paradigms.",
 };
 
 const overlay = (screen: string, alt: string, priority = false) => (
@@ -60,9 +60,9 @@ const FEATURES = [
   {
     eyebrow: "CRAF 4.0",
     title: "Ten dimensions. Five bands. One integrated assessment.",
-    body: "CRAF 4.0 evaluates methodological rigor, scientific validity, originality, theory, literature, sources, writing, peer status, reflexivity, and scholarly legitimacy. The score is only the surface; explanations, evidence, strengths, weaknesses, and limitations make the evaluation useful.",
+    body: "CRAF 4.0 evaluates methodological rigor, scientific validity, originality, theory, literature, sources, writing, peer-review status, reflexivity, and ethical or institutional standards. The score is only one part of the result; explanations, evidence, strengths, weaknesses, and limitations provide the necessary context.",
     points: [
-      "Ten connected research-quality dimensions",
+      "Ten connected dimensions of research quality",
       "Five quality bands across a 0–10 scale",
       "Explanations, evidence, strengths, and limitations",
       "Questions that deepen scholarly reading",
@@ -88,7 +88,7 @@ const FEATURES = [
   },
   {
     eyebrow: "Dashboard",
-    title: "See patterns across the knowledge you evaluate",
+    title: "See patterns across the literature you assess",
     body: "Each assessment contributes to a broader view of fields, quality bands, confidence levels, and recurring ideas. Over time, separate readings become a more coherent picture of your research landscape.",
     points: [
       "Field distribution and quality-band patterns",
@@ -116,7 +116,7 @@ const FEATURES = [
   },
   {
     eyebrow: "Library",
-    title: "Keep the assessment open to return and review",
+    title: "Keep each assessment connected to its source",
     body: "Save each result with its action, confidence, date, quality profile, and reasoning intact. Export the report when the evaluation needs to be discussed, compared, or carried into later research.",
     points: [
       "One-click bookmarking on any result",
@@ -140,10 +140,10 @@ export default function FeaturesPage() {
             align="left"
             title={
               <>
-                Read. Assess. Compare. <em>Then decide.</em>
+                Read. Assess. Compare. <em>Interpret with context.</em>
               </>
             }
-            subtitle="Move from quick orientation to Q1-style evaluation, dialogic questioning, and source comparison—while keeping final scholarly judgment in human hands."
+            subtitle="Move from quick orientation to peer-review-informed assessment, dialogic questioning, and source comparison while keeping interpretation researcher-led."
           />
         </div>
       </section>
@@ -169,7 +169,7 @@ export default function FeaturesPage() {
             <Reveal>
               <span className="eyebrow">Analysis</span>
               <h3 className="mt-4 display-sm text-[clamp(1.5rem,2.8vw,2.1rem)] text-text">
-                From quick orientation to full committee-style evaluation.
+                From quick orientation to full multidimensional assessment.
               </h3>
               <p className="mt-3.5 text-[0.925rem] leading-relaxed text-text-tertiary">
                 Context and key points orient the reading. Focused workflows
@@ -198,15 +198,15 @@ export default function FeaturesPage() {
         <div className="container-x">
           <SectionHeading
             eyebrow="Principles of assessment"
-            title={<>Four commitments that keep <em>judgment scholarly</em></>}
-            subtitle="The platform supports research evaluation; it does not claim authority over the researcher."
+            title={<>Four commitments that keep <em>assessment transparent</em></>}
+            subtitle="The platform supports research evaluation while the researcher remains responsible for interpretation."
           />
           <div className="mt-11 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {[
               ["01", "Evidence", "Reasoning is organized so every conclusion can be inspected."],
               ["02", "Transparency", "Strengths, weaknesses, limitations, and possible bias remain visible."],
               ["03", "Plurality", "Five paradigms reveal how perspective shapes scholarly evaluation."],
-              ["04", "Human authority", "The final interpretation and decision always belong to the researcher."],
+              ["04", "Researcher responsibility", "Interpretation and research decisions remain with the researcher."],
             ].map(([n, title, body], i) => (
               <Reveal key={n} delay={i * 0.06}>
                 <article className="h-full rounded-[1.15rem] acrylic p-6">
@@ -222,7 +222,7 @@ export default function FeaturesPage() {
 
       <CtaBanner
         eyebrow="Democratizing Research"
-        title="Bring a study. Examine it with the logic of experienced reviewers."
+        title="Bring a study. Examine it with structured, peer-review-informed criteria."
         note="Free to start. No credit card required."
       />
     </PageTransition>

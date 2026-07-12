@@ -1,16 +1,17 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import SectionHeading from "../SectionHeading";
 import Reveal from "../Reveal";
+import { IconArrowRight } from "../Icons";
 
 /**
  * Gallery: a guided tour of the desktop app's five fullscreen states.
  *
- * Auto-advances every 7s, pauses on hover / when the tab is hidden /
- * under prefers-reduced-motion. Keyboard-accessible (Left/Right + Home/End).
+ * Auto-advances every 4s and pauses only while hovered.
+ * Keyboard-accessible (Left/Right + Home/End).
  * Each shot swaps with a crossfade and is wrapped in the site's acrylic
  * frame to mirror the app's glass material system.
  */
@@ -77,7 +78,7 @@ const SLIDES: Slide[] = [
   },
 ];
 
-const DWELL_MS = 7000;
+const DWELL_MS = 4000;
 const FADE_MS = 0.55;
 
 // Reads the live site theme (data-theme attribute on <html>) so the gallery
@@ -107,25 +108,15 @@ export default function ShowcaseGallery() {
   const reduce = useReducedMotion();
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
-  const tabVisible = useRef(true);
 
-  // Pause when the tab is hidden, with no autoplay swaps while it is out of view.
+  // Autoplay pauses only when the pointer is over the gallery.
   useEffect(() => {
-    const onVis = () => {
-      tabVisible.current = !document.hidden;
-    };
-    document.addEventListener("visibilitychange", onVis);
-    return () => document.removeEventListener("visibilitychange", onVis);
-  }, []);
-
-  // Autoplay is disabled on hover, hidden tab, or reduced-motion.
-  useEffect(() => {
-    if (reduce || paused || !tabVisible.current) return;
+    if (paused) return;
     const t = setTimeout(() => {
       setIdx((i) => (i + 1) % SLIDES.length);
     }, DWELL_MS);
     return () => clearTimeout(t);
-  }, [idx, reduce, paused, tabVisible]);
+  }, [idx, paused]);
 
   const goTo = useCallback((n: number) => {
     const len = SLIDES.length;
@@ -173,8 +164,6 @@ export default function ShowcaseGallery() {
           className="mx-auto mt-12 max-w-5xl"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
-          onFocus={() => setPaused(true)}
-          onBlur={() => setPaused(false)}
           onKeyDown={onKeyDown}
           role="tablist"
           aria-label="Syllogos app state gallery"
@@ -230,13 +219,31 @@ export default function ShowcaseGallery() {
                   </motion.div>
                 </AnimatePresence>
 
+                {/* Prominent manual navigation, always visible over the stage */}
+                <button
+                  type="button"
+                  onClick={() => goTo(idx - 1)}
+                  aria-label="Previous figure"
+                  className="absolute left-4 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 cursor-pointer place-items-center rounded-full border border-[rgb(var(--border)/0.14)] bg-bg/80 text-text shadow-[var(--shadow-sm)] backdrop-blur-md transition-[transform,background-color,border-color] duration-200 hover:scale-105 hover:border-[rgb(var(--accent-soft)/0.42)] hover:bg-surface sm:grid"
+                >
+                  <IconArrowRight
+                    width={19}
+                    height={19}
+                    className="rotate-180"
+                  />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => goTo(idx + 1)}
+                  aria-label="Next figure"
+                  className="absolute right-4 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 cursor-pointer place-items-center rounded-full border border-[rgb(var(--border)/0.14)] bg-bg/80 text-text shadow-[var(--shadow-sm)] backdrop-blur-md transition-[transform,background-color,border-color] duration-200 hover:scale-105 hover:border-[rgb(var(--accent-soft)/0.42)] hover:bg-surface sm:grid"
+                >
+                  <IconArrowRight width={19} height={19} />
+                </button>
+
                 {/* Caption strip pinned to bottom of stage in soft acrylic */}
                 <div
-                  className="absolute inset-x-0 bottom-0 px-5 pb-4 pt-10"
-                  style={{
-                    background:
-                      "linear-gradient(to top, color-mix(in srgb, var(--bg-deep) 92%, transparent), transparent)",
-                  }}
+                  className="gallery-caption relative px-4 py-4 sm:absolute sm:inset-x-0 sm:bottom-0 sm:px-5 sm:pb-4 sm:pt-10"
                 >
                   <AnimatePresence mode="wait" initial={false}>
                     <motion.div
@@ -264,6 +271,27 @@ export default function ShowcaseGallery() {
                     </motion.div>
                   </AnimatePresence>
                 </div>
+              </div>
+
+              <div className="mt-2 grid grid-cols-2 gap-2 sm:hidden">
+                <button
+                  type="button"
+                  onClick={() => goTo(idx - 1)}
+                  aria-label="Previous figure"
+                  className="inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-xl border border-[rgb(var(--border)/0.1)] bg-bg/60 px-4 py-2.5 text-[0.8rem] font-medium text-text-secondary transition-colors hover:border-[rgb(var(--accent-soft)/0.32)] hover:text-text"
+                >
+                  <IconArrowRight width={16} height={16} className="rotate-180" />
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  onClick={() => goTo(idx + 1)}
+                  aria-label="Next figure"
+                  className="inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-xl border border-[rgb(var(--accent-soft)/0.28)] bg-accent/10 px-4 py-2.5 text-[0.8rem] font-medium text-text transition-colors hover:bg-accent/15"
+                >
+                  Next
+                  <IconArrowRight width={16} height={16} />
+                </button>
               </div>
             </div>
           </Reveal>

@@ -609,6 +609,30 @@ body::before {
   padding-bottom: clamp(4rem, 8vw, 7rem);
 }
 
+@media (max-width: 767px) {
+  /* Mobile visitors should never wait through desktop-scale reveal travel.
+     Framer Motion writes inline transforms, so the explicit override keeps
+     essential hero content immediately legible on narrow screens. */
+  .mobile-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+.gallery-caption {
+  background: var(--bg-deep);
+}
+
+@media (min-width: 640px) {
+  .gallery-caption {
+    background: linear-gradient(
+      to top,
+      color-mix(in srgb, var(--bg-deep) 92%, transparent),
+      transparent
+    );
+  }
+}
+
 /* ============================================================
    Section flow
 

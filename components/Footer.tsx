@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
-import { IconTwitter, IconGithub, IconLinkedin } from "./Icons";
+import { IconInstagram, IconTwitter, IconLinkedin } from "./Icons";
 
 const NAV = [
   { label: "Home", href: "/" },
@@ -11,9 +11,9 @@ const NAV = [
 ];
 
 const SOCIALS = [
-  { label: "X / Twitter", href: "#", Icon: IconTwitter },
-  { label: "GitHub", href: "#", Icon: IconGithub },
-  { label: "LinkedIn", href: "#", Icon: IconLinkedin },
+  { label: "Instagram", href: "https://www.instagram.com/syllogos.io", Icon: IconInstagram },
+  { label: "X", href: "https://x.com/syllogos_io", Icon: IconTwitter },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/syllogos", Icon: IconLinkedin },
 ];
 
 export default function Footer() {
@@ -24,8 +24,8 @@ export default function Footer() {
           <div className="max-w-xs">
             <Logo />
             <p className="mt-4 max-w-[16rem] font-serif text-[0.95rem] italic leading-relaxed text-text-tertiary">
-              Democratizing Research. The evaluative logic of experienced Q1
-              reviewers, made structured, transparent, and accessible.
+              Democratizing Research. Structured assessment informed by
+              peer-review practice, while researchers retain responsibility for interpretation.
             </p>
             <div className="mt-5 flex gap-2">
               {SOCIALS.map(({ label, href, Icon }) => (
@@ -33,6 +33,8 @@ export default function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
+                  target="_blank"
+                  rel="noreferrer"
                   className="grid h-9 w-9 cursor-pointer place-items-center rounded-lg acrylic text-text-tertiary transition-colors duration-200 hover:text-text"
                 >
                   <Icon />
