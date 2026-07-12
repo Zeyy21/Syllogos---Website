@@ -44,13 +44,13 @@ export default function Logo({ className = "" }: { className?: string }) {
   return (
     <Link
       href="/"
-      className={`group flex items-center gap-2.5 ${className}`}
+      className={`group flex min-w-0 items-center gap-2 sm:gap-2.5 ${className}`}
       aria-label="Syllogos home"
     >
-      <span className="grid h-8 w-8 place-items-center rounded-[10px] acrylic text-text transition-colors duration-200 group-hover:text-accent-text">
-        <LogoMark size={17} />
+      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-[11px] border border-[rgb(var(--border)/0.09)] bg-surface/70 text-text shadow-[var(--shadow-sm)] transition-colors duration-200 group-hover:text-accent-text sm:h-8 sm:w-8 sm:rounded-[10px] sm:bg-transparent sm:shadow-none">
+        <LogoMark size={18} />
       </span>
-      <span className="font-mono text-[0.92rem] font-medium tracking-[0.2em] text-text">
+      <span className="truncate font-mono text-[0.82rem] font-semibold tracking-[0.16em] text-text sm:text-[0.92rem] sm:font-medium sm:tracking-[0.2em]">
         SYLLOGOS
       </span>
     </Link>

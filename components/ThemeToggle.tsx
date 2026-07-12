@@ -27,7 +27,7 @@ export default function ThemeToggle() {
     <button
       onClick={toggle}
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-      className="grid h-9 w-9 cursor-pointer place-items-center rounded-lg acrylic text-text-tertiary transition-colors duration-200 hover:text-text"
+      className="grid h-11 w-11 cursor-pointer place-items-center rounded-xl acrylic text-text-tertiary transition-colors duration-200 hover:text-text sm:h-9 sm:w-9 sm:rounded-lg"
     >
       {mounted && theme === "dark" ? (
         <IconMoon width={16} height={16} />

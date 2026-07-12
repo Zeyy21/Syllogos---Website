@@ -8,23 +8,23 @@ import SectionHeading from "../SectionHeading";
 const STEPS = [
   {
     n: "01",
-    title: "Open the source",
-    body: "Use a browser, PDF reader, DOI, pasted text, screenshot, or a newly downloaded paper.",
+    title: "Bring in the research",
+    body: "Use the screen, a PDF or file, a DOI, or pasted text without leaving your reading workflow.",
   },
   {
     n: "02",
-    title: "Syllogos gathers the evidence",
-    body: "The desktop layer detects the source and retrieves the strongest available full text automatically.",
+    title: "Choose the assessment",
+    body: "Select a quick overview, a focused evaluation, a complete CRAF report, or comparison between sources.",
   },
   {
     n: "03",
-    title: "Interrogate what matters",
-    body: "Choose from eight actions, from a fast brief to methods, novelty, bias, citations, or the full CRAF assessment.",
+    title: "Examine the report",
+    body: "Review the score, quality band, evidence, strengths, weaknesses, limitations, and questions for deeper reading.",
   },
   {
     n: "04",
-    title: "Inspect the judgment",
-    body: "See calibrated scores, confidence, limitations, and the exact passages that support every conclusion.",
+    title: "Engage and compare",
+    body: "Question the assessment through five research paradigms, then compare studies when claims or conclusions diverge.",
   },
 ];
 
@@ -37,17 +37,17 @@ export default function HowItWorks() {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section className="section-pad border-t border-[rgb(var(--border)/0.07)]">
+    <section className="section-pad">
       <div className="container-x">
         <SectionHeading
           eyebrow="How it works"
           index="05"
           title={
             <>
-              From open paper to <em>defensible judgment</em>
+              From source to <em>informed scholarly interpretation</em>
             </>
           }
-          subtitle="A continuous workflow from source detection to evidence-backed credibility assessment."
+          subtitle="A continuous path from reading to structured evaluation, dialogue, comparison, and a better-informed research decision."
         />
 
         <div ref={ref} className="relative mx-auto mt-14 max-w-2xl">

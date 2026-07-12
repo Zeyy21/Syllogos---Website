@@ -1,28 +1,28 @@
 import Reveal from "../Reveal";
 
 const PROMISES = [
-  ["01", "Same evidence", "Every reader sees the passages behind the judgment."],
-  ["02", "Same standard", "The framework does not change with status or institution."],
-  ["03", "Visible reasoning", "Scores become understandable, teachable, and open to challenge."],
-  ["04", "Human authority", "The final interpretation always belongs to the person doing the research."],
+  ["01", "Review-informed criteria", "The questions used in rigorous peer review become explicit and learnable."],
+  ["02", "Structured evidence", "Every assessment connects its reasoning to the study in front of you."],
+  ["03", "Multiple perspectives", "Five research paradigms open each assessment to dialogue and challenge."],
+  ["04", "Researcher responsibility", "Interpretation and research decisions remain with the researcher."],
 ];
 
 export default function AccessManifesto() {
   return (
-    <section className="section-pad relative overflow-hidden">
+    <section className="section-pad section-seam relative overflow-hidden">
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgb(var(--accent-soft)/0.08)]" />
       <div className="container-x relative">
         <Reveal>
           <div className="mx-auto max-w-4xl text-center">
-            <span className="readout">Research, opened</span>
+            <span className="readout">Democratizing Research</span>
             <h2 className="mt-6 display text-[clamp(2.3rem,5.4vw,4.35rem)] text-text">
-              Rigor should not depend on <em>privilege or proximity.</em>
+              Rigorous assessment should be <em>accessible to more researchers.</em>
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-[1rem] leading-relaxed text-text-secondary sm:text-[1.08rem]">
-              Expert source evaluation has long depended on time, training,
-              institutional access, and who is available to ask. Syllogos makes
-              those habits of judgment visible and accessible to every student,
-              researcher, educator, and curious reader.
+              Critical appraisal develops through sustained peer review,
+              methodological training, and disciplinary practice. Syllogos makes
+              those evaluative criteria more explicit and easier to apply while
+              preserving the researcher&rsquo;s responsibility for interpretation.
             </p>
           </div>
         </Reveal>

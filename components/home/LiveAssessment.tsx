@@ -7,7 +7,7 @@ import SectionHeading from "../SectionHeading";
 const MODES = [
   { id: "evidence", label: "Extract evidence", readout: "PASS 01 / SOURCE" },
   { id: "rubric", label: "Apply rubric", readout: "PASS 02 / CRITERIA" },
-  { id: "resolve", label: "Resolve judgment", readout: "PASS 03 / RESULT" },
+  { id: "resolve", label: "Present assessment", readout: "PASS 03 / RESULT" },
 ] as const;
 
 const RUBRIC = [
@@ -31,14 +31,14 @@ export default function LiveAssessment() {
   const active = MODES[mode];
 
   return (
-    <section className="section-pad overflow-hidden border-y border-[rgb(var(--border)/0.07)] bg-bg-deep">
+    <section className="section-pad section-tone-enter overflow-hidden">
       <div className="container-x">
         <SectionHeading
-          eyebrow="A judgment, forming"
+          eyebrow="Assessment, made transparent"
           index="02"
           align="left"
-          title={<>Watch the model <em>show its work</em></>}
-          subtitle="Syllogos does not jump from paper to score. It moves through evidence, observable criteria, band selection, confidence, and only then a calibrated judgment."
+          title={<>See how expert evaluation <em>takes shape</em></>}
+          subtitle="Syllogos follows a transparent appraisal sequence: identify the evidence, apply explicit criteria, determine the quality band, and present an assessment for the researcher to examine."
         />
 
         <div
@@ -50,7 +50,7 @@ export default function LiveAssessment() {
             <div className="flex items-center gap-3">
               <span className="h-2 w-2 rounded-full bg-accent" />
               <span className="font-mono text-[0.62rem] uppercase tracking-[0.17em] text-text-secondary">
-                live assessment instrument
+                Structured assessment in progress
               </span>
               <span className="hidden font-mono text-[0.58rem] text-text-tertiary sm:inline">CRAF / 4.0.0</span>
             </div>
@@ -131,7 +131,7 @@ export default function LiveAssessment() {
                         </div>
                       ))}
                     </div>
-                    <p className="marginalia mt-auto text-[0.84rem]">Evidence is attached before any score is permitted to exist.</p>
+                    <p className="marginalia mt-auto text-[0.84rem]">The evidence is organized so the researcher can inspect, question, and interpret the assessment.</p>
                   </motion.div>
                 )}
 
@@ -158,7 +158,7 @@ export default function LiveAssessment() {
 
                 {mode === 2 && (
                   <motion.div key="resolve" initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.98 }} className="relative flex h-full flex-col items-center justify-center text-center">
-                    <span className="figure-label">Composite credibility</span>
+                    <span className="figure-label">Integrated assessment</span>
                     <div className="relative mt-8 grid h-52 w-52 place-items-center rounded-full border border-[rgb(var(--accent-soft)/0.32)]">
                       <div className="absolute inset-3 rounded-full border border-dashed border-[rgb(var(--border)/0.15)]" />
                       <div><div className="numeral text-[4.6rem] leading-none text-text">8.1</div><div className="mt-2 font-mono text-[0.64rem] uppercase tracking-[0.16em] text-accent-text">Strong</div></div>
@@ -168,7 +168,7 @@ export default function LiveAssessment() {
                         <div key={k} className="rounded-xl border border-[rgb(var(--border)/0.08)] bg-bg/35 p-3"><div className="font-mono text-[0.52rem] uppercase tracking-[0.12em] text-text-tertiary">{k}</div><div className="numeral mt-1.5 text-[0.82rem] text-text">{v}</div></div>
                       ))}
                     </div>
-                    <p className="mt-6 max-w-sm text-[0.82rem] leading-relaxed text-text-tertiary">Strong methodological foundation with a minor reporting gap. Judgment resolved without hiding the limitation.</p>
+                    <p className="mt-6 max-w-sm text-[0.82rem] leading-relaxed text-text-tertiary">Strong methodological foundations with a minor reporting gap. The limitation remains visible for the researcher&rsquo;s interpretation.</p>
                   </motion.div>
                 )}
               </AnimatePresence>

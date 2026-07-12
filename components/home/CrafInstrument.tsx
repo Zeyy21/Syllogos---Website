@@ -191,24 +191,25 @@ export default function CrafInstrument() {
   }).join(" ");
 
   return (
-    <section className="section-pad ruler-rule border-t border-[rgb(var(--border)/0.07)]">
+    <section className="section-pad section-seam ruler-rule">
       <div className="container-x">
         <div className="flex flex-col items-center text-center">
           <Reveal>
             <span className="readout">
               <span className="readout-index">CRAF</span>
               <span className="text-text-tertiary/50">/</span>
-              the credibility engine
+              the assessment framework
             </span>
           </Reveal>
           <DisplayHeading as="h2" size="section" delay={0.05} className="mt-5 max-w-3xl">
-            Ten dimensions, <em>one instrument</em>
+            Ten dimensions. <em>Five bands. 0–10.</em>
           </DisplayHeading>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-5 max-w-xl text-balance text-[0.975rem] leading-relaxed text-text-secondary">
-              CRAF 4.0 evaluates a source across ten dimensions, then anchors
-              every score to observable criteria and quoted evidence. The
-              result is not a vibe or a summary. It is an auditable reading.
+              CRAF 4.0 does not reduce a study to an isolated score. It connects
+              methodology, validity, contribution, theory, literature, sources,
+              writing, peer status, bias, and institutional or ethical standards
+              in one multidimensional assessment.
             </p>
           </Reveal>
         </div>
@@ -224,7 +225,7 @@ export default function CrafInstrument() {
                 viewBox={`0 0 ${SIZE} ${SIZE}`}
                 className="h-full w-full overflow-visible"
                 role="img"
-                aria-label={`CRAF credibility instrument. Composite score ${COMPOSITE} out of 10, band ${bandFor(
+                aria-label={`CRAF research assessment instrument. Composite score ${COMPOSITE} out of 10, band ${bandFor(
                   COMPOSITE,
                 )}.`}
               >

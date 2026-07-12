@@ -33,9 +33,9 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-3 sm:px-4 sm:pt-4">
+    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-2.5 pt-2.5 sm:px-4 sm:pt-4">
       <nav
-        className={`flex w-full max-w-[1180px] items-center justify-between rounded-2xl px-3.5 py-2.5 transition-[background-color,border-color,box-shadow] duration-300 sm:px-4 ${
+        className={`flex w-full max-w-[1180px] items-center justify-between rounded-2xl px-2.5 py-2 transition-[background-color,border-color,box-shadow] duration-300 sm:px-4 sm:py-2.5 ${
           scrolled
             ? "acrylic-blur shadow-[var(--shadow-md)]"
             : "border border-transparent"
@@ -84,7 +84,7 @@ export default function Navbar() {
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
             aria-expanded={open}
-            className="grid h-9 w-9 cursor-pointer place-items-center rounded-lg acrylic text-text-tertiary transition-colors hover:text-text md:hidden"
+            className="grid h-11 w-11 cursor-pointer place-items-center rounded-xl acrylic text-text-tertiary transition-colors hover:text-text sm:h-9 sm:w-9 sm:rounded-lg md:hidden"
           >
             {open ? (
               <IconClose width={17} height={17} />
@@ -102,7 +102,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute inset-x-3 top-[4.25rem] rounded-2xl acrylic-elevated p-2.5 md:hidden"
+            className="absolute inset-x-2.5 top-[4.75rem] rounded-2xl acrylic-elevated p-2.5 sm:inset-x-3 sm:top-[4.25rem] md:hidden"
           >
             <div className="flex flex-col gap-0.5">
               {NAV.map((item) => {
@@ -114,7 +114,7 @@ export default function Navbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`rounded-xl px-3.5 py-2.5 text-[0.9rem] transition-colors duration-200 ${
+                    className={`rounded-xl px-3.5 py-3 text-[0.9rem] transition-colors duration-200 ${
                       active
                         ? "bg-accent/10 text-accent-text"
                         : "text-text-tertiary hover:bg-text/[0.04] hover:text-text"

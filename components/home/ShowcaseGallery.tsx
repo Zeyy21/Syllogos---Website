@@ -1,16 +1,17 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import SectionHeading from "../SectionHeading";
 import Reveal from "../Reveal";
+import { IconArrowRight } from "../Icons";
 
 /**
  * Gallery: a guided tour of the desktop app's five fullscreen states.
  *
- * Auto-advances every 7s, pauses on hover / when the tab is hidden /
- * under prefers-reduced-motion. Keyboard-accessible (Left/Right + Home/End).
+ * Auto-advances every 4s and pauses only while hovered.
+ * Keyboard-accessible (Left/Right + Home/End).
  * Each shot swaps with a crossfade and is wrapped in the site's acrylic
  * frame to mirror the app's glass material system.
  */
@@ -30,54 +31,54 @@ const SLIDES: Slide[] = [
   {
     id: "idle",
     eyebrow: "Idle",
-    title: "A quiet surface, ready when you are",
+    title: "Assessment available inside the reading moment",
     caption:
-      "Frameless acrylic shell that floats above your desktop. Nothing demands attention until there's something worth saying.",
+      "Open Syllogos over the source when you need it, then hide it without interrupting the work in front of you.",
     alt: "Syllogos desktop app idle state with a frameless overlay, empty paste surface, and sidebar",
   },
   {
     id: "actionmenu",
     eyebrow: "Contextual analysis",
-    title: "Eight one-click actions on any paper",
+    title: "Eight ways to assess a study",
     caption:
-      "Paste or auto-detect a paper and Syllogos surfaces a contextual panel of analytical actions: fast for quick understanding and deep for rigorous critique.",
+      "Move from context and key points to methods, validity, contribution, coherence, sources, bias, and a complete integrated assessment.",
     alt: "Syllogos desktop app with captured research context and the CRAF 4.0 action menu below",
   },
   {
     id: "labs",
     eyebrow: "Labs · Beta",
-    title: "Conversational research, on demand",
+    title: "One assessment, five research paradigms",
     caption:
-      "Labs opens a grounded Q&A panel over your loaded paper. Ask follow-up questions, probe the methods, and challenge the findings without leaving the analysis.",
+      "Question the assessment through Positivist, Post-Positivist, Constructivist, Critical, and Pragmatist perspectives.",
     alt: "Syllogos Labs conversational Q&A panel open over a loaded research paper with context rail",
   },
   {
     id: "bookmarks",
     eyebrow: "Saved research",
-    title: "A library that ranks itself by what matters",
+    title: "Keep each assessment with its source",
     caption:
-      "Bookmark any result. Color-coded cards make the action type and credibility at-a-glance obvious, sortable, and persistent across sessions.",
+      "Save results with their assessment type, quality band, confidence, and evidence so the reasoning remains available for later review.",
     alt: "Syllogos Saved Research library with color-coded bookmarked analyses",
   },
   {
     id: "insights",
     eyebrow: "Insights dashboard",
-    title: "A profile that learns how you read",
+    title: "See the pattern across your research",
     caption:
-      "Field distribution, credibility spread, confidence breakdown, and recurring keyword trends form a quiet mirror of your research behavior.",
-    alt: "Syllogos Insights dashboard with field distribution, credibility spread and keywords",
+      "Review fields, quality bands, confidence levels, and recurring concepts across the body of work you have assessed.",
+    alt: "Syllogos Insights dashboard with field distribution, quality-band spread and keywords",
   },
   {
     id: "settings",
     eyebrow: "Settings",
-    title: "Tuned for how you actually work",
+    title: "A workflow that stays under your control",
     caption:
-      "Detection sensitivity, full-text fetch sources, theme, language, and a full keyboard-shortcut system keep every control within reach.",
+      "Control detection, content retrieval, language, appearance, and keyboard shortcuts while keeping the researcher in command.",
     alt: "Syllogos settings panel with detection, fetch, appearance and keyboard shortcut options",
   },
 ];
 
-const DWELL_MS = 7000;
+const DWELL_MS = 4000;
 const FADE_MS = 0.55;
 
 // Reads the live site theme (data-theme attribute on <html>) so the gallery
@@ -107,25 +108,15 @@ export default function ShowcaseGallery() {
   const reduce = useReducedMotion();
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
-  const tabVisible = useRef(true);
 
-  // Pause when the tab is hidden, with no autoplay swaps while it is out of view.
+  // Autoplay pauses only when the pointer is over the gallery.
   useEffect(() => {
-    const onVis = () => {
-      tabVisible.current = !document.hidden;
-    };
-    document.addEventListener("visibilitychange", onVis);
-    return () => document.removeEventListener("visibilitychange", onVis);
-  }, []);
-
-  // Autoplay is disabled on hover, hidden tab, or reduced-motion.
-  useEffect(() => {
-    if (reduce || paused || !tabVisible.current) return;
+    if (paused) return;
     const t = setTimeout(() => {
       setIdx((i) => (i + 1) % SLIDES.length);
     }, DWELL_MS);
     return () => clearTimeout(t);
-  }, [idx, reduce, paused, tabVisible]);
+  }, [idx, paused]);
 
   const goTo = useCallback((n: number) => {
     const len = SLIDES.length;
@@ -158,23 +149,21 @@ export default function ShowcaseGallery() {
     >
       <div className="container-x">
         <SectionHeading
-          eyebrow="A guided tour"
+          eyebrow="Assessment in practice"
           index="04"
           align="center"
           title={
             <>
-              Six windows into <em>how Syllogos reads with you</em>
+              Six windows into <em>human-AI research evaluation</em>
             </>
           }
-          subtitle="Each capture is a real frame of the desktop app with the same acrylic surfaces, warm gold accent, and quiet typography. Nothing is mocked up or dressed up for the screenshot."
+          subtitle="From first input to dialogic review, each screen supports one purpose: making rigorous research assessment clearer, faster, and more accessible."
         />
 
         <div
           className="mx-auto mt-12 max-w-5xl"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
-          onFocus={() => setPaused(true)}
-          onBlur={() => setPaused(false)}
           onKeyDown={onKeyDown}
           role="tablist"
           aria-label="Syllogos app state gallery"
@@ -230,13 +219,31 @@ export default function ShowcaseGallery() {
                   </motion.div>
                 </AnimatePresence>
 
+                {/* Prominent manual navigation, always visible over the stage */}
+                <button
+                  type="button"
+                  onClick={() => goTo(idx - 1)}
+                  aria-label="Previous figure"
+                  className="absolute left-4 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 cursor-pointer place-items-center rounded-full border border-[rgb(var(--border)/0.14)] bg-bg/80 text-text shadow-[var(--shadow-sm)] backdrop-blur-md transition-[transform,background-color,border-color] duration-200 hover:scale-105 hover:border-[rgb(var(--accent-soft)/0.42)] hover:bg-surface sm:grid"
+                >
+                  <IconArrowRight
+                    width={19}
+                    height={19}
+                    className="rotate-180"
+                  />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => goTo(idx + 1)}
+                  aria-label="Next figure"
+                  className="absolute right-4 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 cursor-pointer place-items-center rounded-full border border-[rgb(var(--border)/0.14)] bg-bg/80 text-text shadow-[var(--shadow-sm)] backdrop-blur-md transition-[transform,background-color,border-color] duration-200 hover:scale-105 hover:border-[rgb(var(--accent-soft)/0.42)] hover:bg-surface sm:grid"
+                >
+                  <IconArrowRight width={19} height={19} />
+                </button>
+
                 {/* Caption strip pinned to bottom of stage in soft acrylic */}
                 <div
-                  className="absolute inset-x-0 bottom-0 px-5 pb-4 pt-10"
-                  style={{
-                    background:
-                      "linear-gradient(to top, color-mix(in srgb, var(--bg-deep) 92%, transparent), transparent)",
-                  }}
+                  className="gallery-caption relative px-4 py-4 sm:absolute sm:inset-x-0 sm:bottom-0 sm:px-5 sm:pb-4 sm:pt-10"
                 >
                   <AnimatePresence mode="wait" initial={false}>
                     <motion.div
@@ -264,6 +271,27 @@ export default function ShowcaseGallery() {
                     </motion.div>
                   </AnimatePresence>
                 </div>
+              </div>
+
+              <div className="mt-2 grid grid-cols-2 gap-2 sm:hidden">
+                <button
+                  type="button"
+                  onClick={() => goTo(idx - 1)}
+                  aria-label="Previous figure"
+                  className="inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-xl border border-[rgb(var(--border)/0.1)] bg-bg/60 px-4 py-2.5 text-[0.8rem] font-medium text-text-secondary transition-colors hover:border-[rgb(var(--accent-soft)/0.32)] hover:text-text"
+                >
+                  <IconArrowRight width={16} height={16} className="rotate-180" />
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  onClick={() => goTo(idx + 1)}
+                  aria-label="Next figure"
+                  className="inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-xl border border-[rgb(var(--accent-soft)/0.28)] bg-accent/10 px-4 py-2.5 text-[0.8rem] font-medium text-text transition-colors hover:bg-accent/15"
+                >
+                  Next
+                  <IconArrowRight width={16} height={16} />
+                </button>
               </div>
             </div>
           </Reveal>

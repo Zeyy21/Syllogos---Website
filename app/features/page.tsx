@@ -10,7 +10,7 @@ import AppShot from "@/components/AppShot";
 export const metadata: Metadata = {
   title: "Features",
   description:
-    "Evidence-anchored credibility assessment, discipline-aware CRAF scoring, automatic source detection, and eight reviewer-grade research actions.",
+    "Peer-review-informed research assessment through CRAF 4.0, eight analytical workflows, source comparison, and five dialogic paradigms.",
 };
 
 const overlay = (screen: string, alt: string, priority = false) => (
@@ -30,12 +30,12 @@ const fullscreen = (screen: string, alt: string) => (
 const FEATURES = [
   {
     eyebrow: "Detection",
-    title: "The source finds Syllogos",
-    body: "A quiet background watcher recognizes academic work across your desktop and offers to load it at the moment you begin reading. You stay in control: fetch, snooze, or dismiss without leaving the page.",
+    title: "Bring research in without breaking your workflow",
+    body: "Analyze what is already in front of you through screen capture, a file, pasted text, or a DOI. Syllogos fits the way researchers read instead of asking them to restructure the document or leave the page.",
     points: [
-      "18+ academic platforms recognized out of the box",
-      "OCR and window-title detection across applications",
-      "Deliberate fetch, snooze, and dismiss controls",
+      "Screen, PDF, DOI, file, and pasted-text inputs",
+      "Academic content recognized across applications",
+      "Researcher-controlled fetch, capture, and dismissal",
     ],
     visual: overlay(
       "idle",
@@ -45,12 +45,12 @@ const FEATURES = [
   },
   {
     eyebrow: "Retrieval",
-    title: "Judge the paper, not the screenshot",
-    body: "Syllogos resolves the strongest available source through CrossRef, Unpaywall, and OpenAlex, then falls back to structured extraction when needed. Newly downloaded PDFs can enter the same pipeline automatically.",
+    title: "Assess the study in its strongest available form",
+    body: "Syllogos resolves published metadata and available full text, then uses structured extraction when needed. The goal is not merely to read what is visible, but to assemble enough of the source for a responsible evaluation.",
     points: [
-      "CrossRef, Unpaywall, and OpenAlex retrieval",
-      "Structured OCR fallback for difficult sources",
-      "Automatic PDF import from your Downloads folder",
+      "DOI and published-source retrieval",
+      "Structured extraction for difficult documents",
+      "Direct support for full papers and reports",
     ],
     visual: fullscreen(
       "idle",
@@ -59,13 +59,13 @@ const FEATURES = [
   },
   {
     eyebrow: "CRAF 4.0",
-    title: "Ten dimensions. Every score accountable.",
-    body: "CRAF 4.0 judges methodological rigor, validity, originality, theory, literature, sources, writing, peer evaluation, objectivity, and implicit legitimacy. Observable criteria select the band; quoted evidence justifies the score; disqualifiers prevent polished weakness from passing as rigor.",
+    title: "Ten dimensions. Five bands. One integrated assessment.",
+    body: "CRAF 4.0 evaluates methodological rigor, scientific validity, originality, theory, literature, sources, writing, peer-review status, reflexivity, and ethical or institutional standards. The score is only one part of the result; explanations, evidence, strengths, weaknesses, and limitations provide the necessary context.",
     points: [
-      "Ten calibrated credibility dimensions",
-      "Mandatory quoted evidence for every score",
-      "Discipline-adaptive composite weighting",
-      "Indeterminate when evidence is insufficient",
+      "Ten connected dimensions of research quality",
+      "Five quality bands across a 0–10 scale",
+      "Explanations, evidence, strengths, and limitations",
+      "Questions that deepen scholarly reading",
     ],
     visual: fullscreen(
       "actionmenu",
@@ -74,12 +74,12 @@ const FEATURES = [
   },
   {
     eyebrow: "Labs · Beta",
-    title: "Question the paper from more than one angle",
-    body: "Labs is a grounded conversation with the loaded source, shaped through multiple reviewer perspectives. Clarify an argument, stress-test a claim, or ask what a skeptical methodologist would notice.",
+    title: "Question the assessment from five perspectives",
+    body: "The dialogic window recognizes that research cannot be evaluated from one final viewpoint. Engage through Positivist, Post-Positivist, Constructivist, Critical, and Pragmatist approaches.",
     points: [
-      "Answers grounded in the loaded source",
-      "Multiple reviewer perspectives",
-      "Currently in open beta",
+      "Five fundamental research paradigms",
+      "Questions grounded in the source and assessment",
+      "A dialogic rather than mechanical evaluation",
     ],
     visual: fullscreen(
       "labs",
@@ -88,10 +88,10 @@ const FEATURES = [
   },
   {
     eyebrow: "Dashboard",
-    title: "Your reading becomes a research graph",
-    body: "Every assessment contributes to a private picture of the fields, credibility bands, confidence levels, and ideas shaping your work. Over time, the library becomes context, not just storage.",
+    title: "See patterns across the literature you assess",
+    body: "Each assessment contributes to a broader view of fields, quality bands, confidence levels, and recurring ideas. Over time, separate readings become a more coherent picture of your research landscape.",
     points: [
-      "Field distribution and credibility patterns",
+      "Field distribution and quality-band patterns",
       "Confidence breakdown and keyword trends",
       "Filter by time period and discipline",
     ],
@@ -102,8 +102,8 @@ const FEATURES = [
   },
   {
     eyebrow: "Power users",
-    title: "Keyboard Shortcuts",
-    body: "A full shortcut system for power users. Global shortcuts toggle auto-detection, show or hide the Syllogos window, and capture a manual screenshot. In-app shortcuts handle bookmarking, dismissing, and rerunning. Number keys trigger analysis actions directly.",
+    title: "Open, capture, and assess without interruption",
+    body: "Global shortcuts show or hide Syllogos, capture the source in front of you, and control background detection. The interface stays available without taking the researcher away from the material being evaluated.",
     points: [
       "Global shortcuts for detection, visibility, capture",
       "In-app shortcuts for bookmark, dismiss, rerun",
@@ -116,8 +116,8 @@ const FEATURES = [
   },
   {
     eyebrow: "Library",
-    title: "Keep the judgment with the source",
-    body: "Bookmark any result with its action, confidence, date, and credibility profile intact. Export to Markdown, text, PDF, clipboard, or a branded public report when the analysis needs to travel.",
+    title: "Keep each assessment connected to its source",
+    body: "Save each result with its action, confidence, date, quality profile, and reasoning intact. Export the report when the evaluation needs to be discussed, compared, or carried into later research.",
     points: [
       "One-click bookmarking on any result",
       "Color-coded cards by action type",
@@ -140,10 +140,10 @@ export default function FeaturesPage() {
             align="left"
             title={
               <>
-                One source. <em>Eight ways to question it.</em>
+                Read. Assess. Compare. <em>Interpret with context.</em>
               </>
             }
-            subtitle="From the moment a paper appears on screen to the moment its credibility is understood, Syllogos keeps the evidence, the method, and the researcher in one continuous loop."
+            subtitle="Move from quick orientation to peer-review-informed assessment, dialogic questioning, and source comparison while keeping interpretation researcher-led."
           />
         </div>
       </section>
@@ -163,19 +163,19 @@ export default function FeaturesPage() {
       </section>
 
       {/* Eight Analysis Actions, dedicated section */}
-      <section className="section-pad border-y border-[rgb(var(--border)/0.07)]">
+      <section className="section-pad section-seam">
         <div className="container-x">
           <div className="grid items-center gap-9 lg:grid-cols-2 lg:gap-14">
             <Reveal>
               <span className="eyebrow">Analysis</span>
               <h3 className="mt-4 display-sm text-[clamp(1.5rem,2.8vw,2.1rem)] text-text">
-                A fast read when you need speed. A deep read when it matters.
+                From quick orientation to full multidimensional assessment.
               </h3>
               <p className="mt-3.5 text-[0.925rem] leading-relaxed text-text-tertiary">
-                Summarize and Key Points orient you quickly. Six deep actions
-                interrogate methods, novelty, coherence, sources, bias, and the
-                complete ten-dimension CRAF profile. Each returns a structured,
-                evidence-linked result, not a wall of generated prose.
+                Context and key points orient the reading. Focused workflows
+                examine methods, contribution, coherence, sources, and bias;
+                Full Assessment integrates all ten CRAF dimensions into one
+                explained report for the researcher to review.
               </p>
             </Reveal>
             <Reveal delay={0.08}>
@@ -194,19 +194,19 @@ export default function FeaturesPage() {
         </section>
       ))}
 
-      <section className="section-pad border-y border-[rgb(var(--border)/0.07)] bg-bg-deep">
+      <section className="section-pad section-tone-island">
         <div className="container-x">
           <SectionHeading
-            eyebrow="Engineered for trust"
-            title={<>Four rules the model <em>cannot negotiate</em></>}
-            subtitle="These are product constraints, not marketing promises."
+            eyebrow="Principles of assessment"
+            title={<>Four commitments that keep <em>assessment transparent</em></>}
+            subtitle="The platform supports research evaluation while the researcher remains responsible for interpretation."
           />
           <div className="mt-11 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              ["01", "Evidence", "No quoted passage, no valid score."],
-              ["02", "Determinism", "The same source and action return the same assessment."],
-              ["03", "Discipline", "The rubric adapts to the kind of knowledge being evaluated."],
-              ["04", "Uncertainty", "Missing evidence returns Indeterminate, never a fabricated midpoint."],
+              ["01", "Evidence", "Reasoning is organized so every conclusion can be inspected."],
+              ["02", "Transparency", "Strengths, weaknesses, limitations, and possible bias remain visible."],
+              ["03", "Plurality", "Five paradigms reveal how perspective shapes scholarly evaluation."],
+              ["04", "Researcher responsibility", "Interpretation and research decisions remain with the researcher."],
             ].map(([n, title, body], i) => (
               <Reveal key={n} delay={i * 0.06}>
                 <article className="h-full rounded-[1.15rem] acrylic p-6">
@@ -221,8 +221,8 @@ export default function FeaturesPage() {
       </section>
 
       <CtaBanner
-        eyebrow="See it in action"
-        title="Bring a difficult source. Leave with a defensible reading."
+        eyebrow="Democratizing Research"
+        title="Bring a study. Examine it with structured, peer-review-informed criteria."
         note="Free to start. No credit card required."
       />
     </PageTransition>

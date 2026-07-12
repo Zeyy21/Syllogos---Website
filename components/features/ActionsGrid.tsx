@@ -3,12 +3,12 @@ import Reveal from "../Reveal";
 const ACTIONS = [
   {
     name: "Summarize Context",
-    desc: "Neutral overview of the main points.",
+    desc: "Question, method, findings, and limitations.",
     tier: "Fast",
   },
   {
     name: "Extract Key Points",
-    desc: "Bulleted list of core findings.",
+    desc: "Claims, findings, figures, and conclusions.",
     tier: "Fast",
   },
   {
@@ -17,8 +17,8 @@ const ACTIONS = [
     tier: "Deep",
   },
   {
-    name: "Novelty & Scholarship",
-    desc: "Originality and literature mastery.",
+    name: "Novelty & Contribution",
+    desc: "Originality and scholarly contribution.",
     tier: "Deep",
   },
   {
@@ -27,8 +27,8 @@ const ACTIONS = [
     tier: "Deep",
   },
   {
-    name: "Sources & Review",
-    desc: "Source credibility and peer evaluation.",
+    name: "Sources & Peer Review",
+    desc: "Reference reliability and peer-review status.",
     tier: "Deep",
   },
   {
@@ -38,7 +38,7 @@ const ACTIONS = [
   },
   {
     name: "Full Assessment",
-    desc: "All 10 CRAF 4.0 dimensions at once.",
+    desc: "One integrated report across all 10 dimensions.",
     tier: "Deep",
   },
 ];

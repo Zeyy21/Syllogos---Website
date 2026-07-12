@@ -15,7 +15,7 @@ const PLATFORMS = [
 
 export default function TrustStrip() {
   return (
-    <section className="border-y border-[rgb(var(--border)/0.07)] py-10">
+    <section className="section-seam-quiet py-10">
       <div className="container-x">
         <Reveal>
           <p className="mb-7 text-center font-mono text-[0.72rem] uppercase tracking-[0.18em] text-text-tertiary">

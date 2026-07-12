@@ -8,7 +8,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Transparent pricing for students, researchers, power users, and research teams. Start free, then scale with your work.",
+    "Accessible plans for structured research assessment, from individual reading to shared evaluation across a lab.",
 };
 
 const TIERS = [
@@ -16,7 +16,7 @@ const TIERS = [
     name: "Free",
     price: "$0",
     period: "/ forever",
-    tagline: "Learn what rigorous assessment feels like.",
+    tagline: "Begin evaluating research with a clear framework.",
     cta: "Start free",
     ctaHref: "/download",
     note: "No credit card required",
@@ -32,7 +32,7 @@ const TIERS = [
     name: "Researcher",
     price: "$18",
     period: "/ month",
-    tagline: "For active academics and graduate students.",
+    tagline: "For researchers who evaluate studies every day.",
     cta: "Choose Researcher",
     ctaHref: "/download",
     featured: true,
@@ -49,7 +49,7 @@ const TIERS = [
     name: "Pro",
     price: "$49",
     period: "/ month",
-    tagline: "For systematic reviews and serious volume.",
+    tagline: "For sustained assessment across larger bodies of work.",
     cta: "Choose Pro",
     ctaHref: "/download",
     note: "$499/year, built for power users",
@@ -65,7 +65,7 @@ const TIERS = [
     name: "Team / Lab",
     price: "$22",
     period: "/ seat / month",
-    tagline: "One credibility standard for the whole group.",
+    tagline: "One shared language for research quality.",
     cta: "Talk to us",
     ctaHref: "/about",
     note: "From $22 per seat · pooled usage",
@@ -81,8 +81,8 @@ const TIERS = [
 
 const FAQ = [
   {
-    q: "What counts as a deep analysis?",
-    a: "Methods & Validity, Novelty & Scholarship, Coherence & Clarity, Sources & Review, Bias & Legitimacy, and Full Assessment use the deep model tier. Summaries and key-point extraction are light actions and remain generous across every plan.",
+    q: "What counts as a deep assessment?",
+    a: "Methods & Validity, Novelty & Contribution, Coherence & Clarity, Sources & Peer Review, Bias & Legitimacy, and Full Assessment apply CRAF criteria in greater depth. Context summaries and key-point extraction remain light orientation actions.",
   },
   {
     q: "What happens when I reach my allowance?",
@@ -97,8 +97,8 @@ const FAQ = [
     a: "Syllogos runs on Windows 10+ and macOS 12+. It detects academic content across 18+ platforms out of the box, including JSTOR, arXiv, PubMed, Springer, IEEE, and ScienceDirect. It also works system-wide with browsers and PDF readers.",
   },
   {
-    q: "Why not offer unlimited deep analysis?",
-    a: "Deep assessments have a real per-use inference cost. Soft allowances keep the entry price fair for ordinary researchers while preventing a small number of extreme workloads from raising prices for everyone.",
+    q: "Why not offer unlimited deep assessment?",
+    a: "Multidimensional evaluation has a real per-use inference cost. Soft allowances help keep structured assessment accessible to individual researchers without making unusually large workloads raise the price for everyone.",
   },
 ];
 
@@ -111,10 +111,10 @@ export default function PricingPage() {
             eyebrow="Pricing"
             title={
               <>
-                Priced for the way <em>research actually moves</em>
+                Wider access to <em>rigorous research assessment</em>
               </>
             }
-            subtitle="Start at zero, pay for deeper volume when Syllogos has earned a place in your workflow, and scale from one researcher to a whole lab."
+            subtitle="Start with accessible evaluation, deepen the analysis as your work requires, and extend a shared assessment framework from one researcher to an entire lab."
           />
         </div>
       </section>
@@ -135,14 +135,14 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="section-pad border-y border-[rgb(var(--border)/0.07)] bg-bg-deep">
+      <section className="section-pad section-tone-island">
         <div className="container-x">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
             <SectionHeading
-              eyebrow="Why measured pricing"
+              eyebrow="Access with sustainability"
               align="left"
-              title={<>Fair to the reader. <em>Honest about the compute.</em></>}
-              subtitle="A full paper assessment costs cents to run, but usage varies dramatically between a student checking a few sources and a systematic reviewer processing hundreds. Soft limits preserve both access and sustainability."
+              title={<>Democratizing assessment. <em>Sustaining the work.</em></>}
+              subtitle="A researcher evaluating a few sources and a review team processing hundreds create very different demands. Soft limits keep the entry point open while supporting the deeper analysis required by larger projects."
             />
             <Reveal delay={0.08}>
               <div className="grid grid-cols-3 gap-2.5">
@@ -163,7 +163,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="section-pad border-t border-[rgb(var(--border)/0.07)]">
+      <section className="section-pad section-seam">
         <div className="container-x">
           <SectionHeading eyebrow="FAQ" title="Questions, answered" />
           <div className="mx-auto mt-10 max-w-2xl">
