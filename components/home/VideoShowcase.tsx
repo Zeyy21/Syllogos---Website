@@ -40,6 +40,7 @@ export default function VideoShowcase() {
 
   return (
     <section
+      id="overview"
       className="video-showcase section-seam relative overflow-hidden pb-[clamp(4.5rem,9vw,8rem)] pt-[clamp(4rem,7vw,6.5rem)]"
       aria-label="Syllogos product overview"
     >
@@ -61,13 +62,16 @@ export default function VideoShowcase() {
             delay={0.05}
             className="mt-5"
           >
-            See what rigorous research assessment <em>looks like in practice.</em>
+            Why research quality deserves <em>more than a summary.</em>
           </DisplayHeading>
 
           <Reveal delay={0.1}>
-            <p className="mx-auto mt-5 max-w-2xl text-balance text-[0.975rem] leading-relaxed text-text-secondary">
-              A guided introduction to the reasoning behind Syllogos, the CRAF
-              4.0 framework, and the evidence-linked workflow that keeps
+            <p
+              id="overview-description"
+              className="mx-auto mt-5 max-w-2xl text-balance text-[0.975rem] leading-relaxed text-text-secondary"
+            >
+              In under three minutes: the reasoning behind Syllogos, the CRAF
+              4.0 framework, and an evidence-linked workflow designed to keep
               scholarly judgment in your hands.
             </p>
           </Reveal>
@@ -115,6 +119,7 @@ export default function VideoShowcase() {
                 onPause={() => setIsPlaying(false)}
                 onEnded={() => setIsPlaying(false)}
                 aria-label="Syllogos product overview video"
+                aria-describedby="overview-description"
               >
                 Your browser does not support HTML video. You can{" "}
                 <a href={VIDEO_SRC}>download the Syllogos overview video</a>

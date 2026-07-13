@@ -10,10 +10,10 @@ import { IconMenu, IconClose } from "./Icons";
 
 const NAV = [
   { label: "Home", href: "/" },
+  { label: "Overview", href: "/#overview" },
   { label: "Features", href: "/features" },
   { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
-  { label: "Download", href: "/download" },
 ];
 
 export default function Navbar() {
@@ -33,13 +33,10 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-2.5 pt-2.5 sm:px-4 sm:pt-4">
+    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-2.5 pt-2.5 sm:px-4 sm:pt-3.5">
       <nav
-        className={`flex w-full max-w-[1180px] items-center justify-between rounded-2xl px-2.5 py-2 transition-[background-color,border-color,box-shadow] duration-300 sm:px-4 sm:py-2.5 ${
-          scrolled
-            ? "acrylic-blur shadow-[var(--shadow-md)]"
-            : "border border-transparent"
-        }`}
+        aria-label="Primary navigation"
+        className={`nav-shell flex w-full max-w-[1210px] items-center justify-between rounded-2xl px-2.5 py-2 transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 sm:px-4 sm:py-2.5 ${scrolled ? "nav-shell-scrolled" : ""}`}
       >
         <Logo />
 
@@ -53,7 +50,7 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative rounded-lg px-3 py-1.5 text-[0.875rem] transition-colors duration-200 ${
+                className={`relative rounded-lg px-3 py-1.5 text-[0.84rem] transition-colors duration-200 ${
                   active
                     ? "text-text"
                     : "text-text-tertiary hover:text-text"
@@ -76,7 +73,7 @@ export default function Navbar() {
           <ThemeToggle />
           <Link
             href="/download"
-            className="hidden cursor-pointer rounded-lg btn-primary px-3.5 py-1.5 text-[0.875rem] sm:inline-flex"
+            className="hidden min-h-9 cursor-pointer items-center rounded-full btn-primary px-4 py-1.5 text-[0.84rem] sm:inline-flex"
           >
             Start free
           </Link>

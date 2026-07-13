@@ -196,9 +196,9 @@ export default function CrafInstrument() {
         <div className="flex flex-col items-center text-center">
           <Reveal>
             <span className="readout">
-              <span className="readout-index">CRAF</span>
+              <span className="readout-index">02</span>
               <span className="text-text-tertiary/50">/</span>
-              the assessment framework
+              CRAF 4.0 · the assessment framework
             </span>
           </Reveal>
           <DisplayHeading as="h2" size="section" delay={0.05} className="mt-5 max-w-3xl">

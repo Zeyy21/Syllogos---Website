@@ -1,7 +1,3 @@
-"use client";
-
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
 import Reveal from "../Reveal";
 import SectionHeading from "../SectionHeading";
 
@@ -14,83 +10,56 @@ const STEPS = [
   {
     n: "02",
     title: "Choose the assessment",
-    body: "Select a quick overview, a focused evaluation, a complete CRAF report, or comparison between sources.",
+    body: "Orient quickly, examine one dimension, run the complete CRAF report, or compare sources.",
   },
   {
     n: "03",
-    title: "Examine the report",
-    body: "Review the score, quality band, evidence, strengths, weaknesses, limitations, and questions for deeper reading.",
+    title: "Inspect the reasoning",
+    body: "Review the quality band, source evidence, strengths, weaknesses, limitations, and open questions.",
   },
   {
     n: "04",
-    title: "Engage and compare",
-    body: "Question the assessment through five research paradigms, then compare studies when claims or conclusions diverge.",
+    title: "Interpret with context",
+    body: "Question the result through five paradigms and apply the disciplinary judgment only you can supply.",
   },
 ];
 
 export default function HowItWorks() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start 65%", "end 70%"],
-  });
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-
   return (
-    <section className="section-pad">
+    <section className="section-pad section-seam-quiet">
       <div className="container-x">
         <SectionHeading
-          eyebrow="How it works"
+          eyebrow="From source to judgment"
           index="05"
+          align="left"
           title={
             <>
-              From source to <em>informed scholarly interpretation</em>
+              Four moves. One continuous <em>scholarly workflow.</em>
             </>
           }
-          subtitle="A continuous path from reading to structured evaluation, dialogue, comparison, and a better-informed research decision."
+          subtitle="The interface recedes so the intellectual sequence remains clear: gather the source, evaluate it, inspect the reasoning, and decide what the evidence means in context."
         />
 
-        <div ref={ref} className="relative mx-auto mt-14 max-w-2xl">
-          {/* track */}
-          <div className="absolute left-[19px] top-2 bottom-2 w-px bg-[rgb(var(--border)/0.1)] md:left-1/2" />
-          {/* progress line */}
-          <motion.div
-            className="absolute left-[19px] top-2 w-px bg-accent md:left-1/2"
-            style={{ height: lineHeight }}
-          />
-
-          <div className="flex flex-col gap-9">
-            {STEPS.map((step, i) => (
-              <Reveal key={step.n} delay={i * 0.06}>
-                <div
-                  className={`relative flex items-start gap-5 md:gap-0 ${
-                    i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
-                >
-                  {/* node marker with serif numeral, like a figure index */}
-                  <div className="relative z-10 grid h-11 w-11 shrink-0 place-items-center rounded-full acrylic-elevated md:absolute md:left-1/2 md:-translate-x-1/2">
-                    <span className="font-serif text-[1.1rem] font-medium leading-none text-accent-text">
-                      {step.n}
-                    </span>
-                  </div>
-                  {/* card */}
-                  <div
-                    className={`flex-1 rounded-[1.1rem] acrylic card-hover p-5 md:max-w-[44%] ${
-                      i % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
-                    }`}
-                  >
-                    <h3 className="display-sm text-[1.1rem] text-text">
-                      {step.title}
-                    </h3>
-                    <p className="mt-1.5 text-[0.85rem] leading-relaxed text-text-tertiary">
-                      {step.body}
-                    </p>
-                  </div>
+        <ol className="mt-14 grid border-t border-[rgb(var(--border)/0.11)] md:grid-cols-2 lg:mt-16 lg:grid-cols-4">
+          {STEPS.map((step, index) => (
+            <Reveal key={step.n} delay={index * 0.06} className="h-full">
+              <li className="workflow-step relative h-full border-b border-[rgb(var(--border)/0.11)] px-0 py-8 md:px-6 lg:border-b-0 lg:border-r lg:px-7 lg:py-10 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0">
+                <div className="flex items-center gap-3">
+                  <span className="grid h-9 w-9 place-items-center rounded-full border border-[rgb(var(--accent-soft)/0.32)] font-mono text-[0.63rem] text-accent-text">
+                    {step.n}
+                  </span>
+                  <span className="h-px flex-1 bg-gradient-to-r from-[rgb(var(--accent-soft)/0.24)] to-transparent" />
                 </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
+                <h3 className="mt-7 display-sm text-[1.25rem] text-text">
+                  {step.title}
+                </h3>
+                <p className="mt-3 text-[0.86rem] leading-[1.68] text-text-tertiary">
+                  {step.body}
+                </p>
+              </li>
+            </Reveal>
+          ))}
+        </ol>
       </div>
     </section>
   );

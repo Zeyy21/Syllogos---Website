@@ -52,7 +52,7 @@ export default function MagneticButton({
         href={href}
         onMouseMove={onMove}
         onMouseLeave={reset}
-        className={`inline-flex cursor-pointer items-center justify-center gap-1.5 rounded-xl px-5 py-2.5 text-[0.9rem] ${base} ${className}`}
+        className={`inline-flex min-h-11 cursor-pointer items-center justify-center gap-1.5 rounded-full px-5 py-2.5 text-[0.9rem] ${base} ${className}`}
       >
         {children}
       </Link>

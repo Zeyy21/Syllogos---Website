@@ -35,7 +35,7 @@ export default function LiveAssessment() {
       <div className="container-x">
         <SectionHeading
           eyebrow="Assessment, made transparent"
-          index="02"
+          index="03"
           align="left"
           title={<>See how expert evaluation <em>takes shape</em></>}
           subtitle="Syllogos follows a transparent appraisal sequence: identify the evidence, apply explicit criteria, determine the quality band, and present an assessment for the researcher to examine."

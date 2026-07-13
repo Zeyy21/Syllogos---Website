@@ -1,6 +1,5 @@
 import Reveal from "./Reveal";
 import MagneticButton from "./MagneticButton";
-import DepthField from "./three/DepthField";
 import { IconArrowRight } from "./Icons";
 
 type Props = {
@@ -18,34 +17,25 @@ export default function CtaBanner({
     <section className="section-pad section-seam-quiet">
       <div className="container-x">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[1.5rem] acrylic-elevated px-6 py-16 text-center sm:px-12 sm:py-20">
-            {/* woven 3D depth field */}
-            <DepthField className="opacity-70" />
-
-            {/* top accent hairline */}
-            <div
-              className="pointer-events-none absolute inset-x-0 top-0 h-px"
-              style={{
-                background:
-                  "linear-gradient(to right, transparent, rgb(216 182 90 / 0.6), transparent)",
-              }}
-            />
-
+          <div className="cta-premium relative overflow-hidden rounded-[1.65rem] px-6 py-16 text-center sm:px-12 sm:py-24">
+            <div className="cta-premium-glow" aria-hidden="true" />
             <div className="relative flex flex-col items-center">
               <span className="readout">{eyebrow}</span>
-              <h2 className="mx-auto mt-4 max-w-xl display text-[clamp(1.9rem,4vw,3rem)] text-text">
+              <h2 className="mx-auto mt-5 max-w-3xl display text-[clamp(2.2rem,5vw,4.25rem)] text-text">
                 {title}
               </h2>
-              <div className="mt-8 flex flex-col items-center justify-center gap-2.5 sm:flex-row">
+              <div className="mt-9 flex flex-col items-center justify-center gap-2.5 sm:flex-row">
                 <MagneticButton href="/download">
-                  Start free
+                  Start your first assessment
                   <IconArrowRight width={16} height={16} />
                 </MagneticButton>
                 <MagneticButton href="/features" variant="secondary">
-                  Explore Assessment
+                  Explore the framework
                 </MagneticButton>
               </div>
-              <p className="mt-5 text-[0.825rem] text-text-tertiary">{note}</p>
+              <p className="mt-6 font-mono text-[0.62rem] uppercase tracking-[0.12em] text-text-tertiary">
+                {note}
+              </p>
             </div>
           </div>
         </Reveal>

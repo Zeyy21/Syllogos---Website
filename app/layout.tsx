@@ -40,6 +40,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
   : process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
     : "http://localhost:3000";
+const ogImageUrl = new URL("/og.png", siteUrl).toString();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -61,6 +62,21 @@ export const metadata: Metadata = {
     description:
       "Structured, evidence-linked research assessment informed by established peer-review criteria.",
     type: "website",
+    images: [
+      {
+        url: ogImageUrl,
+        width: 1748,
+        height: 909,
+        alt: "Syllogos — Assess the study. See what holds.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Syllogos | Assess the study. See what holds.",
+    description:
+      "Evidence-linked research assessment through CRAF 4.0.",
+    images: [ogImageUrl],
   },
 };
 
