@@ -623,6 +623,100 @@ body::before {
   background: var(--bg-deep);
 }
 
+/* Product film: a restrained cinema treatment that carries the desktop
+   application's navy and gold into a flagship, responsive media stage. */
+.video-showcase {
+  isolation: isolate;
+}
+
+.video-showcase-orbit {
+  position: absolute;
+  z-index: -1;
+  top: 22%;
+  left: 50%;
+  width: min(92vw, 76rem);
+  aspect-ratio: 1.7;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 48%, rgb(var(--accent-soft) / 0.08), transparent 42%),
+    radial-gradient(circle at 30% 55%, rgb(57 82 168 / 0.08), transparent 38%);
+  filter: blur(32px);
+  pointer-events: none;
+}
+
+:root[data-theme="light"] .video-showcase-orbit {
+  opacity: 0.52;
+}
+
+.video-stage {
+  isolation: isolate;
+}
+
+.video-stage-ambient {
+  position: absolute;
+  z-index: -1;
+  inset: 10% 6% -8%;
+  border-radius: 2.5rem;
+  background: rgb(var(--accent-soft) / 0.12);
+  filter: blur(60px);
+  opacity: 0.58;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.video-stage:hover .video-stage-ambient {
+  opacity: 0.82;
+}
+
+.video-stage-shell {
+  background:
+    linear-gradient(var(--surface-elevated), var(--surface-elevated)) padding-box,
+    linear-gradient(
+        125deg,
+        rgb(var(--border) / 0.16),
+        rgb(var(--accent-soft) / 0.38) 48%,
+        rgb(var(--border) / 0.08)
+      ) border-box;
+  border: 1px solid transparent;
+  box-shadow:
+    0 28px 80px rgb(0 0 0 / 0.42),
+    0 0 0 1px rgb(var(--border) / 0.04) inset;
+  transition: box-shadow 0.45s ease, border-color 0.45s ease;
+}
+
+:root[data-theme="light"] .video-stage-shell {
+  box-shadow:
+    0 28px 70px rgb(62 48 25 / 0.15),
+    0 0 0 1px rgb(255 255 255 / 0.72) inset;
+}
+
+.video-stage-poster {
+  background:
+    linear-gradient(to top, rgb(3 7 17 / 0.58), transparent 34%),
+    radial-gradient(circle at center, transparent 0 22%, rgb(3 7 17 / 0.08) 55%, rgb(3 7 17 / 0.28));
+}
+
+.video-play::before {
+  content: "";
+  position: absolute;
+  inset: -0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgb(var(--accent-soft) / 0.22);
+  animation: video-play-pulse 2.8s ease-out infinite;
+}
+
+@keyframes video-play-pulse {
+  0% {
+    opacity: 0.75;
+    transform: scale(0.84);
+  }
+  70%, 100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
 @media (min-width: 640px) {
   .gallery-caption {
     background: linear-gradient(

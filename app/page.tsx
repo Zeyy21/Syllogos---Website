@@ -1,6 +1,7 @@
 import PageTransition from "@/components/PageTransition";
 import Hero from "@/components/home/Hero";
 import Showcase from "@/components/home/Showcase";
+import VideoShowcase from "@/components/home/VideoShowcase";
 import CrafInstrument from "@/components/home/CrafInstrument";
 import ShowcaseGallery from "@/components/home/ShowcaseGallery";
 import TrustStrip from "@/components/home/TrustStrip";
@@ -16,6 +17,7 @@ export default function HomePage() {
     <PageTransition>
       <Hero />
       <Showcase />
+      <VideoShowcase />
       <ValueProps />
       <AccessManifesto />
       <CrafInstrument />
